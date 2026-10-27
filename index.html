@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Pilot Platform — satellite and AI agro-advisory plus farmer-centred digital value chain and traceability. Responsive demo prototype.">
 <meta name="theme-color" content="#1b5e20">
-<title>Pilot Platform — Agro Advisory &amp; Value Chain</title>
+<title>Pilot Platform — Agro Advisory & Value Chain</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🌿</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,14 +49,10 @@ html[data-theme="dark"]{
   --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -22px rgba(0,0,0,.9);
   --shadow-lg:0 30px 70px -30px rgba(0,0,0,.95);
 }
-/* ============================================================
-   BASE
-   ============================================================ */
 *,*::before,*::after{box-sizing:border-box;}
 *{margin:0;padding:0;}
 html,body{min-height:100%;}
-html{overflow-x:clip;}
-html{-webkit-text-size-adjust:100%;}
+html{overflow-x:clip;-webkit-text-size-adjust:100%;}
 body{
   background:var(--bg); color:var(--ink);
   font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
@@ -70,9 +66,6 @@ a{color:var(--green);}
 ::selection{background:var(--green); color:#fff;}
 :focus-visible{outline:2px solid var(--green); outline-offset:2px;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
-/* ============================================================
-   TOP BAR
-   ============================================================ */
 .topbar{
   position:sticky; top:0; z-index:900;
   display:flex; align-items:center; gap:10px;
@@ -100,9 +93,6 @@ a{color:var(--green);}
 .icon-btn:hover{background:var(--green-light); color:var(--green-dark); border-color:transparent;}
 .icon-btn:active{transform:scale(.97);}
 #menuBtn{display:none;}
-/* ============================================================
-   LAYOUT
-   ============================================================ */
 .layout{display:grid; grid-template-columns:var(--sidebar-w) minmax(0,1fr); align-items:start;}
 .sidebar{
   position:sticky; top:var(--topbar-h); align-self:start;
@@ -130,18 +120,12 @@ html[data-theme="dark"] .nav-btn.active{background:rgba(255,255,255,.13); color:
 .sidebar .foot{margin-top:auto; padding-top:16px; font-size:10.5px; line-height:1.6; opacity:.62; border-top:1px solid rgba(255,255,255,.12);}
 .main{min-width:0; padding:clamp(16px,2.6vw,30px) clamp(14px,3vw,34px) 72px;}
 .wrap{max-width:1240px; margin:0 auto;}
-/* ============================================================
-   PAGES
-   ============================================================ */
 .page{display:none;}
 .page.active{display:block; animation:fade .26s ease both;}
 @keyframes fade{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
 .page-head{display:flex; flex-wrap:wrap; gap:12px; align-items:flex-end; justify-content:space-between;}
 .page-title{font-size:clamp(19px,2.5vw,26px); font-weight:800;}
 .page-sub{color:var(--muted); font-size:12.8px; margin-top:4px; max-width:70ch; line-height:1.55;}
-/* ============================================================
-   BANNER
-   ============================================================ */
 .demo-banner{
   display:flex; align-items:flex-start; gap:9px;
   background:var(--amber-light); border:1px solid rgba(249,168,37,.42);
@@ -150,9 +134,6 @@ html[data-theme="dark"] .nav-btn.active{background:rgba(255,255,255,.13); color:
 }
 html[data-theme="dark"] .demo-banner{color:#ffd88a; border-color:rgba(249,168,37,.35);}
 .demo-banner b{font-weight:700;}
-/* ============================================================
-   GRID + CARDS
-   ============================================================ */
 .grid{display:grid; gap:16px; grid-auto-columns:minmax(0,1fr);}
 .grid > *{min-width:0;}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
@@ -182,9 +163,6 @@ html[data-theme="dark"] .kpi::after{opacity:.5;}
 .muted-sm{font-size:11.2px; color:var(--muted); margin-top:2px; line-height:1.45;}
 .hint{font-size:11.5px; color:var(--muted); margin-top:10px; line-height:1.6;}
 .hint code{background:var(--card-2); border:1px solid var(--line); border-radius:5px; padding:1px 5px; font-size:10.8px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}
-/* ============================================================
-   TAGS
-   ============================================================ */
 .tag{
   display:inline-block; padding:3px 10px; border-radius:999px;
   font-size:11px; font-weight:700; letter-spacing:.01em; white-space:nowrap;
@@ -197,9 +175,6 @@ html[data-theme="dark"] .tag.warn{color:#ffd88a;}
 html[data-theme="dark"] .tag.info{color:#9cc7ff;}
 .tag.neutral{background:var(--card-2); color:var(--muted); border:1px solid var(--line);}
 .tags{display:flex; flex-wrap:wrap; gap:6px; margin:12px 0;}
-/* ============================================================
-   TABLES
-   ============================================================ */
 .table-wrap{
   width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
   border:1px solid var(--line); border-radius:12px; background:var(--card);
@@ -220,9 +195,6 @@ tbody tr:hover td{background:var(--hover);}
 tbody td b{color:var(--ink); font-weight:650;}
 td .row-actions{display:flex; gap:6px; justify-content:flex-end;}
 .table-empty{padding:20px 14px; text-align:center; font-size:12.5px; color:var(--muted);}
-/* ============================================================
-   BUTTONS
-   ============================================================ */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:7px;
   background:var(--green); color:#fff; border-radius:10px;
@@ -243,14 +215,8 @@ html[data-theme="dark"] .btn-outline{color:var(--green);}
 .btn-danger:hover{background:var(--red-light); color:var(--red);}
 .btn-row{display:flex; flex-wrap:wrap; gap:9px; margin-top:12px;}
 .btn-block{width:100%;}
-/* ============================================================
-   PROGRESS
-   ============================================================ */
 .progress{height:8px; background:var(--line); border-radius:999px; overflow:hidden; margin-top:10px;}
 .progress > div{height:100%; border-radius:999px; background:linear-gradient(90deg,#43a047,#1b5e20); transition:width .5s ease;}
-/* ============================================================
-   FORMS
-   ============================================================ */
 .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 12px;}
 .field{display:block; margin-bottom:12px; min-width:0;}
 .field > span{display:block; font-size:11.5px; font-weight:600; color:var(--muted); margin-bottom:5px; letter-spacing:.01em;}
@@ -262,25 +228,21 @@ input[type=text],input[type=number],input[type=search],select,textarea{
 }
 input::placeholder,textarea::placeholder{color:var(--muted); opacity:.75;}
 input:focus,select:focus,textarea:focus{outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(46,125,50,.16); background:var(--card);}
-select{appearance:none; background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%); background-position:calc(100% - 18px) 18px, calc(100% - 12px) 18px; background-size:6px 6px, 6px 6px; background-repeat:no-repeat;}
+select{appearance:none; background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%); background-position:calc(100% - 18px) 18px,calc(100% - 13px) 18px; background-size:5px 5px,5px 5px; background-repeat:no-repeat; padding-right:34px;}
 textarea{resize:vertical; min-height:80px;}
 .check{display:flex; align-items:flex-start; gap:9px; font-size:12.2px; color:var(--muted); margin:2px 0 14px; line-height:1.45; cursor:pointer;}
 .check input[type=checkbox]{width:18px; height:18px; min-height:0; flex:0 0 auto; margin-top:1px; accent-color:var(--green); cursor:pointer;}
-/* ============================================================
-   CHART BOXES
-   ============================================================ */
 .chart-box{position:relative; width:100%; height:250px;}
 .chart-box.h-tall{height:310px;}
 .chart-box.h-mid{height:260px;}
 .chart-box.h-sm{height:230px;}
 .chart-box canvas{position:absolute; inset:0; width:100% !important; height:100% !important;}
-/* ============================================================
-   MAP
-   ============================================================ */
 #map{
   width:100%; height:clamp(320px,52vh,480px);
+  min-height:320px;
   border-radius:14px; border:1px solid var(--line);
   z-index:10; background:#dfe7e0;
+  position:relative;
 }
 .leaflet-container{font-family:inherit; background:#22303f;}
 .leaflet-control-layers, .leaflet-bar a{color:#111 !important;}
@@ -292,9 +254,6 @@ textarea{resize:vertical; min-height:80px;}
   background:var(--card-2); border:1px dashed var(--line);
   font-size:11.8px; color:var(--muted); line-height:1.5;
 }
-/* ============================================================
-   TIMELINE
-   ============================================================ */
 .timeline{border-left:2px solid var(--line); padding-left:18px; margin:6px 0 0 6px;}
 .timeline .step{position:relative; margin-bottom:16px;}
 .timeline .step:last-child{margin-bottom:0;}
@@ -306,9 +265,6 @@ textarea{resize:vertical; min-height:80px;}
 .timeline .step.pending::before{background:var(--muted); box-shadow:0 0 0 3px var(--line);}
 .timeline b{font-size:12.8px; display:block; color:var(--ink);}
 .timeline p{font-size:11.8px; color:var(--muted); margin-top:2px; line-height:1.5;}
-/* ============================================================
-   STAGE CARDS
-   ============================================================ */
 .stage-card{display:flex; flex-direction:column;}
 .stage-card h3{font-size:14px; align-items:flex-start; line-height:1.35;}
 .stage-num{
@@ -327,9 +283,6 @@ html[data-theme="dark"] .stage-num{color:#06120a;}
 }
 .stage-card .ai-reco{margin-top:14px;}
 .ai-reco b{color:var(--purple);}
-/* ============================================================
-   CHAT
-   ============================================================ */
 .chat-box{
   height:280px; overflow-y:auto; overscroll-behavior:contain;
   border:1px solid var(--line); border-radius:12px;
@@ -359,9 +312,6 @@ html[data-theme="dark"] .msg.user{color:var(--ink);}
   transition:.15s;
 }
 .chat-suggest button:hover{border-color:var(--green); color:var(--green-dark); background:var(--green-light);}
-/* ============================================================
-   TOASTS
-   ============================================================ */
 .toasts{
   position:fixed; right:14px; bottom:14px; z-index:3000;
   display:flex; flex-direction:column; gap:9px;
@@ -382,9 +332,6 @@ html[data-theme="dark"] .msg.user{color:var(--ink);}
 .toast.err{border-left-color:var(--red);}
 .toast .t-ico{font-size:14px; line-height:1.35; flex:0 0 auto;}
 .toast .t-close{margin-left:auto; font-size:14px; color:var(--muted); padding:0 2px; line-height:1;}
-/* ============================================================
-   MODAL
-   ============================================================ */
 .modal-overlay{
   position:fixed; inset:0; z-index:2500; padding:16px;
   background:rgba(6,14,20,.55); -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
@@ -402,9 +349,6 @@ html[data-theme="dark"] .msg.user{color:var(--ink);}
 .modal h3{margin-bottom:14px; color:var(--green-dark); font-size:16px;}
 html[data-theme="dark"] .modal h3{color:var(--green);}
 .modal .btn-row{margin-top:16px;}
-/* ============================================================
-   MISC
-   ============================================================ */
 .divider{height:1px; background:var(--line); margin:14px 0;}
 .scrim{
   position:fixed; inset:0; background:rgba(6,14,20,.5); z-index:990;
@@ -413,9 +357,6 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 }
 .scrim.show{opacity:1; pointer-events:auto;}
 .stack-sm > * + *{margin-top:10px;}
-/* ============================================================
-   EXTRAS
-   ============================================================ */
 .kpi-ico{font-size:17px; line-height:1; margin-bottom:2px;}
 .cycle-legend{display:flex; flex-wrap:wrap; gap:7px 14px; margin-top:14px; list-style:none; font-size:11.5px; color:var(--muted);}
 .cycle-legend li{display:flex; align-items:center; gap:7px; line-height:1.35;}
@@ -424,16 +365,10 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 .legend-chip{display:inline-flex; align-items:center; gap:6px; font-weight:500;}
 .legend-dot{width:10px; height:10px; border-radius:3px; flex:0 0 auto;}
 .file-hidden{position:absolute; width:1px; height:1px; opacity:0; pointer-events:none;}
-/* ============================================================
-   RESPONSIVE — TABLET
-   ============================================================ */
 @media (max-width:1100px){
   :root{--sidebar-w:240px;}
   .main{padding-left:18px; padding-right:18px;}
 }
-/* ============================================================
-   RESPONSIVE — MOBILE (drawer navigation)
-   ============================================================ */
 @media (max-width:900px){
   #menuBtn{display:inline-grid;}
   .layout{grid-template-columns:minmax(0,1fr);}
@@ -480,7 +415,7 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
     <div class="brand-mark" aria-hidden="true">🌿</div>
     <div class="brand-text">
       <strong data-cfg="program">WHH Ethiopia | Pilot Platform</strong>
-      <small>Agro Advisory &amp; Digital Value Chain</small>
+      <small>Agro Advisory & Digital Value Chain</small>
     </div>
   </div>
   <div class="topbar-actions">
@@ -491,7 +426,6 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 <div class="scrim" id="scrim"></div>
 
 <div class="layout">
-  <!-- ============ SIDEBAR ============ -->
   <aside class="sidebar" id="sidebar" aria-label="Main navigation">
     <div class="side-head">
       <div class="name">Pilot Platform</div>
@@ -523,7 +457,6 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
         <span><b>Demo prototype for client demonstration.</b> All data shown is simulated for field-testing purposes.</span>
       </div>
 
-      <!-- ============ OVERVIEW ============ -->
       <section class="page active" id="page-overview" aria-label="Overview">
         <div class="page-head">
           <div>
@@ -546,7 +479,7 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
         <div class="grid grid-2">
           <div class="card">
             <h3>🛰️ <span data-cfg="site1">Tupl Agro Advisor · Haruka, Afar</span></h3>
-            <p>Satellite + AI agronomic decision support: sowing optimization, variable-rate fertilization, pest &amp; disease rounds, germination mapping and pre-harvest yield estimation.</p>
+            <p>Satellite + AI agronomic decision support: sowing optimization, variable-rate fertilization, pest & disease rounds, germination mapping and pre-harvest yield estimation.</p>
             <div class="tags">
               <span class="tag ok">Platform access verified</span>
               <span class="tag ok">Command areas mapped</span>
@@ -558,7 +491,7 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 
           <div class="card">
             <h3>☕ <span data-cfg="site2">CofiBlocks · Jimma Coffee</span></h3>
-            <p>Farmer-centred digital governance &amp; traceability co-designed with cooperatives, unions, traders and farmers — verifiable receipts, batch histories and transparent payments.</p>
+            <p>Farmer-centred digital governance & traceability co-designed with cooperatives, unions, traders and farmers — verifiable receipts, batch histories and transparent payments.</p>
             <div class="tags">
               <span class="tag ok">2 co-design rounds done</span>
               <span class="tag ok">Workflows defined</span>
@@ -574,10 +507,10 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
               <table class="t-sm">
                 <thead><tr><th scope="col">Module</th><th scope="col">Capability</th><th scope="col">Status</th></tr></thead>
                 <tbody>
-                  <tr><td><b>🛰️ Satellite mapping</b></td><td>Hybrid satellite map, draw/import command areas &amp; crop zones</td><td><span class="tag ok">Live</span></td></tr>
+                  <tr><td><b>🛰️ Satellite mapping</b></td><td>Hybrid satellite map, draw/import command areas & crop zones</td><td><span class="tag ok">Live</span></td></tr>
                   <tr><td><b>🌱 Agronomic cycle</b></td><td>6-stage advisory: sowing → fertilization ×2 → pest/weed ×2 → yield estimation</td><td><span class="tag ok">Live</span></td></tr>
-                  <tr><td><b>🧬 Germination mapping</b></td><td>NDVI-based low-germination zone detection &amp; reseeding advice</td><td><span class="tag ok">Live</span></td></tr>
-                  <tr><td><b>🤖 AI copilot</b></td><td>Plain-language agronomic Q&amp;A grounded in field telemetry</td><td><span class="tag info">Demo</span></td></tr>
+                  <tr><td><b>🧬 Germination mapping</b></td><td>NDVI-based low-germination zone detection & reseeding advice</td><td><span class="tag ok">Live</span></td></tr>
+                  <tr><td><b>🤖 AI copilot</b></td><td>Plain-language agronomic Q&A grounded in field telemetry</td><td><span class="tag info">Demo</span></td></tr>
                   <tr><td><b>🧾 Traceability</b></td><td>Batch tracking, receipts, payment transparency</td><td><span class="tag ok">Live</span></td></tr>
                   <tr><td><b>👥 Farmer registry</b></td><td>Consent-based GPS-tagged profiles</td><td><span class="tag ok">Live</span></td></tr>
                 </tbody>
@@ -592,8 +525,8 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
                 <thead><tr><th scope="col" aria-label="Icon"></th><th scope="col">Opportunity</th><th scope="col">Status</th></tr></thead>
                 <tbody>
                   <tr><td>🌱</td><td>AI-assisted, climate-responsive extension</td><td><span class="tag info">Active</span></td></tr>
-                  <tr><td>🧾</td><td>Farmer-centred traceability &amp; market transparency</td><td><span class="tag info">Active</span></td></tr>
-                  <tr><td>🗂️</td><td>Foundational farmer &amp; enterprise data</td><td><span class="tag warn">Building</span></td></tr>
+                  <tr><td>🧾</td><td>Farmer-centred traceability & market transparency</td><td><span class="tag info">Active</span></td></tr>
+                  <tr><td>🗂️</td><td>Foundational farmer & enterprise data</td><td><span class="tag warn">Building</span></td></tr>
                   <tr><td>🤝</td><td>Innovation-to-market partnerships</td><td><span class="tag warn">Scoping</span></td></tr>
                 </tbody>
               </table>
@@ -602,7 +535,6 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
         </div>
       </section>
 
-      <!-- ============ AGRO ADVISORY ============ -->
       <section class="page" id="page-afar" aria-label="Agro advisory">
         <div class="page-head">
           <div>
@@ -619,9 +551,8 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
           <div class="card kpi"><div class="kpi-ico" aria-hidden="true">🌾</div><div class="stat" style="color:var(--green);">Good</div><div class="stat-label">Crop status (NDVI proxy)</div></div>
         </div>
 
-        <!-- MAP -->
         <div class="card">
-          <h3>🗺️ Command area &amp; crop zones — satellite hybrid map</h3>
+          <h3>🗺️ Command area & crop zones — satellite hybrid map</h3>
           <div class="map-toolbar">
             <button class="btn btn-sm btn-outline" id="importBtn" type="button">📥 Import zones (CSV)</button>
             <button class="btn btn-sm btn-outline" id="exportBtn" type="button">📤 Export zones (CSV)</button>
@@ -630,14 +561,14 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
             <span class="tag info" id="zoneCount">0 zones registered</span>
           </div>
           <div id="map"></div>
+          <div id="mapLoadStatus" class="map-status" style="display:none;margin-top:8px;" role="status"></div>
           <div class="map-status">
             <span aria-hidden="true">✏️</span>
-            <span>Draw a <b>polygon</b> or drop a <b>marker</b> with the tools on the left of the map — a dialog lets you name it, assign a crop and register it. Edit or delete shapes with the toolbar.</span>
+            <span>Draw a <b>polygon</b> or drop a <b>marker</b> with the tools on the left of the map — a dialog lets you name it, assign a crop and register it. Edit or delete shapes with the edit tool; scroll-wheel zoom is disabled so the page still scrolls — use the +/− buttons or pinch.</span>
           </div>
-          <p class="hint">📄 <b>CSV format:</b> <code>name,crop,lat,lng</code> — repeat rows with the same zone name to build a polygon (min 3 points). A single row creates a point marker. Example: <code>North Block,Corn,9.49491,40.31325</code>.</p>
+          <p class="hint">📄 <b>CSV format:</b> <code>name,crop,lat,lng</code> — repeat rows with the same zone name to build a polygon (min 3 points). A single row creates a point marker. Export produces the same format, so round-tripping works.</p>
         </div>
 
-        <!-- ZONES TABLE -->
         <div class="card">
           <h3>📋 Registered crop zones</h3>
           <div class="table-wrap">
@@ -649,54 +580,52 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
           </div>
         </div>
 
-        <!-- AGRONOMIC CYCLE -->
         <div class="card">
           <h3>🌾 Agronomic cycle — stage-by-stage AI advisory <span class="tag info">Sowing → Harvest</span></h3>
           <div class="chart-box h-mid"><canvas id="chCycle" aria-label="Agronomic activity curve with six key stages" role="img"></canvas></div>
           <ul class="cycle-legend" id="cycleLegend"></ul>
-          <p class="hint">Activity level from satellite &amp; climatic data across the 10-month cycle. Red markers = the six key agronomic stages where the platform delivers targeted recommendations.</p>
+          <p class="hint">Activity level from satellite & climatic data across the 10-month cycle. Red markers = the six key agronomic stages where the platform delivers targeted recommendations.</p>
         </div>
 
         <div class="grid grid-3">
           <div class="card stage-card">
             <h3><span class="stage-num">1</span>Sowing date optimization</h3>
-            <p>Pick the optimal sowing date from agro-climatic conditions — satellite baseline on soil moisture, temperature &amp; vegetation cover; forecasts avoid frost and excessive rainfall.</p>
-            <ul><li>Agro-climatic data integration (historical + real-time)</li><li>Weather forecasting for sowing windows</li><li>Baseline soil moisture &amp; vegetation cover maps</li></ul>
+            <p>Pick the optimal sowing date from agro-climatic conditions — satellite baseline on soil moisture, temperature & vegetation cover; forecasts avoid frost and excessive rainfall.</p>
+            <ul><li>Agro-climatic data integration (historical + real-time)</li><li>Weather forecasting for sowing windows</li><li>Baseline soil moisture & vegetation cover maps</li></ul>
             <div class="ai-reco"><b>🤖 AI:</b> Optimal sowing window opens in ~10 days. Soil moisture at 61% field capacity, frost risk low — proceed with pre-plant irrigation 5 days prior.</div>
           </div>
           <div class="card stage-card">
             <h3><span class="stage-num">2</span>Fertilization strategy · Round 1</h3>
             <p>Ideal first-round schedule from satellite crop-health imagery and weather — applied only when conditions maximize uptake, never lost to rain or wind.</p>
-            <ul><li>Remote-sensing nutrient-deficiency detection</li><li>Localized doses by soil, crop &amp; zone</li><li>Weather-timed application windows</li></ul>
-            <div class="ai-reco"><b>🤖 AI:</b> 34% of command area is in the Minimum nutrition zone. Variable-rate prescription map ready — target SE blocks first, avoid Maximum zones (waste risk).</div>
+            <ul><li>Remote-sensing nutrient-deficiency detection</li><li>Localized doses by soil, crop & zone</li><li>Weather-timed application windows</li></ul>
+            <div class="ai-reco"><b>🤖 AI:</b> 34% of command area is in the Minimum nutrition zone. Variable-rate prescription map ready — target SE blocks first, avoid Maximum zones (waste reduction 15–30%).</div>
           </div>
           <div class="card stage-card">
-            <h3><span class="stage-num">3</span>Pest, disease &amp; weed · Round 1</h3>
+            <h3><span class="stage-num">3</span>Pest, disease & weed · Round 1</h3>
             <p>AI analysis of satellite imagery catches infestations and weed growth before visible symptoms — with alerts and sustainable treatment options.</p>
-            <ul><li>AI + computer vision early detection</li><li>Real-time alerts via mobile channels</li><li>Organic options &amp; weather-aware treatment timing</li></ul>
+            <ul><li>AI + computer vision early detection</li><li>Real-time alerts via mobile channels</li><li>Organic options & weather-aware treatment timing</li></ul>
             <div class="ai-reco"><b>🤖 AI:</b> Early stress signature in Zone C (NDVI −0.08 vs baseline). Inspect within 48h — recommend spot-treatment, not blanket spray.</div>
           </div>
           <div class="card stage-card">
             <h3><span class="stage-num">4</span>Fertilization strategy · Round 2</h3>
             <p>Second round adjusted against Round 1 results — evaluated from satellite response, current growth stage and weather to prevent runoff.</p>
-            <ul><li>Round 1 impact evaluation via NDVI response</li><li>Growth-stage tailored nutrient plan</li><li>Over-fertilization &amp; runoff prevention</li></ul>
+            <ul><li>Round 1 impact evaluation via NDVI response</li><li>Growth-stage tailored nutrient plan</li><li>Over-fertilization & runoff prevention</li></ul>
             <div class="ai-reco"><b>🤖 AI:</b> Round 1 produced +22% NDVI response in Zone A. Reduce Round 2 dose by 15% in Zone B; maintain plan elsewhere.</div>
           </div>
           <div class="card stage-card">
-            <h3><span class="stage-num">5</span>Pest, disease &amp; weed · Round 2</h3>
+            <h3><span class="stage-num">5</span>Pest, disease & weed · Round 2</h3>
             <p>Continuous monitoring through crop development — targeted late-stage treatments localized by geography, pest type and crop vulnerability.</p>
-            <ul><li>Ongoing satellite surveillance</li><li>Precision second-round treatment</li><li>Localized by pest type &amp; vulnerability</li></ul>
+            <ul><li>Ongoing satellite surveillance</li><li>Precision second-round treatment</li><li>Localized by pest type & vulnerability</li></ul>
             <div class="ai-reco"><b>🤖 AI:</b> No new outbreak signatures. Maintain twice-weekly monitoring cadence; wind Tuesday may spread spores — avoid field work.</div>
           </div>
           <div class="card stage-card">
             <h3><span class="stage-num">6</span>Yield estimation · pre-harvest</h3>
-            <p>AI yield prediction from plant height, leaf colour &amp; density — plus protein/humidity quality estimates and market price forecasting for post-harvest planning.</p>
-            <ul><li>AI yield prediction model</li><li>Protein &amp; humidity quality estimates</li><li>Market price forecasting</li></ul>
-            <div class="ai-reco"><b>🤖 AI:</b> Estimated yield 4.8 t/ha · protein 12.1% · humidity 11.8%. Indicative price ETB 41–44/kg — align post-harvest logistics &amp; cold chain now.</div>
+            <p>AI yield prediction from plant height, leaf colour & density — plus protein/humidity quality estimates and market price forecasting for post-harvest planning.</p>
+            <ul><li>AI yield prediction model</li><li>Protein & humidity quality estimates</li><li>Market price forecasting</li></ul>
+            <div class="ai-reco"><b>🤖 AI:</b> Estimated yield 4.8 t/ha · protein 12.1% · humidity 11.8%. Indicative price ETB 41–44/kg — align post-harvest logistics & cold chain now.</div>
           </div>
         </div>
 
-        <!-- GERMINATION -->
         <div class="grid grid-2">
           <div class="card">
             <h3>🧬 Germination rate mapping — spatial low-germination zones</h3>
@@ -704,12 +633,12 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
             <div class="legend-row">
               <span class="legend-chip"><i class="legend-dot" style="background:rgba(46,125,50,.25);border:1px solid #2e7d32"></i>Expected germination</span>
               <span class="legend-chip"><i class="legend-dot" style="background:rgba(46,125,50,.75)"></i>NDVI ≥ 65%</span>
-              <span class="legend-chip"><i class="legend-dot" style="background:rgba(198,40,40,.75)"></i>NDVI &lt; 65%</span>
+              <span class="legend-chip"><i class="legend-dot" style="background:rgba(198,40,40,.75)"></i>NDVI < 65%</span>
             </div>
           </div>
           <div class="card">
             <h3>Reseeding recommendation</h3>
-            <p>NDVI coverage compared against the expected germination profile (sowing date, soil type &amp; field records cross-referenced). Expected field germination: <b>80%</b>.</p>
+            <p>NDVI coverage compared against the expected germination profile (sowing date, soil type & field records cross-referenced). Expected field germination: <b>80%</b>.</p>
             <div class="table-wrap" style="margin-top:12px;">
               <table class="t-sm">
                 <thead><tr><th scope="col">Zone</th><th scope="col">Expected</th><th scope="col">NDVI actual</th><th scope="col">Verdict</th></tr></thead>
@@ -722,14 +651,13 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
                 </tbody>
               </table>
             </div>
-            <div class="ai-reco"><b>🤖 AI:</b> “Reseed ~20% of the field in the highlighted zones (D &amp; E).” Precision reseeding saves seed, labour and water while lifting yield potential.</div>
+            <div class="ai-reco"><b>🤖 AI:</b> “Reseed ~20% of the field in the highlighted zones (D & E).” Precision reseeding saves seed, labour and water while lifting yield potential.</div>
             <div class="btn-row">
               <button class="btn btn-outline btn-sm" type="button" data-toast="Reseeding task assigned to field operator via WhatsApp (demo).">📲 Assign reseeding task</button>
             </div>
           </div>
         </div>
 
-        <!-- ANALYTICS -->
         <div class="grid grid-2">
           <div class="card">
             <h3>Precision nutrition zones</h3>
@@ -742,13 +670,13 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
             <p class="hint">Satellite vegetation indices over the current campaign. Slower recovery flagged for field visit.</p>
           </div>
           <div class="card">
-            <h3>Climate risk — temp &amp; humidity (14 days)</h3>
+            <h3>Climate risk — temp & humidity (14 days)</h3>
             <div class="chart-box h-sm"><canvas id="chClimate" aria-label="Fourteen day temperature and humidity outlook" role="img"></canvas></div>
           </div>
           <div class="card">
             <h3>Soil health benchmark — multi-site comparison</h3>
             <div class="chart-box h-sm"><canvas id="chSoil" aria-label="Radar comparison of soil health indicators" role="img"></canvas></div>
-            <p class="hint">Compare topology, area &amp; soil health across plots under one profile.</p>
+            <p class="hint">Compare topology, area & soil health across plots under one profile.</p>
           </div>
         </div>
 
@@ -774,14 +702,14 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
           <div class="card">
             <h3>🤖 AI agronomic copilot <span class="tag warn">Decision support — not a prescription</span></h3>
             <div class="chat-box" id="chatBox" role="log" aria-live="polite" aria-label="Conversation with the agronomic copilot">
-              <div class="msg ai">Hello! I’m your agronomic assistant. Ask me about sowing dates, germination &amp; reseeding, fertilization rounds, pests/weeds, irrigation, or yield &amp; market outlook.</div>
+              <div class="msg ai">Hello! I’m your agronomic assistant. Ask me about sowing dates, germination & reseeding, fertilization rounds, pests/weeds, irrigation, or yield & market outlook. Always confirm with your extension agent.</div>
             </div>
             <div class="chat-suggest" id="chatSuggest">
               <button type="button" data-ask="Which zones need reseeding?">Reseeding</button>
               <button type="button" data-ask="When should I sow?">Sowing window</button>
               <button type="button" data-ask="Fertilizer plan">Fertilizer plan</button>
               <button type="button" data-ask="Pest risk">Pest risk</button>
-              <button type="button" data-ask="Yield and price outlook">Yield &amp; price</button>
+              <button type="button" data-ask="Yield and price outlook">Yield & price</button>
             </div>
             <div class="chat-input">
               <input id="chatInput" type="text" placeholder="e.g. Which zones need reseeding?" aria-label="Ask the agronomic copilot">
@@ -790,12 +718,12 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
           </div>
         </div>
       </section>
-      <!-- ============ VALUE CHAIN ============ -->
+
       <section class="page" id="page-jimma" aria-label="Digital value chain">
         <div class="page-head">
           <div>
             <h1 class="page-title">☕ <span data-cfg="site2">CofiBlocks · Jimma Coffee</span></h1>
-            <p class="page-sub">Farmer-centred digital governance, traceable batches &amp; transparent payments.</p>
+            <p class="page-sub">Farmer-centred digital governance, traceable batches & transparent payments.</p>
           </div>
           <div class="tags" style="margin:0"><span class="tag ok">Receipts verified</span><span class="tag warn">Live tx tests pending</span></div>
         </div>
@@ -812,10 +740,10 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
             <h3>Batch traceability — batch #011 <span class="tag ok">Verified</span></h3>
             <div class="timeline">
               <div class="step"><b>Delivery recorded</b><p>Abera K. · 240 kg · GPS-tagged plot · receipt #1183</p></div>
-              <div class="step"><b>Cooperative batching</b><p>Float &amp; visual grade A-</p></div>
+              <div class="step"><b>Cooperative batching</b><p>Float & visual grade A-</p></div>
               <div class="step"><b>Processing logged</b><p>Washed · 48h fermentation · drying beds DB-04/05</p></div>
               <div class="step"><b>Union transfer</b><p>Warehouse intake verified</p></div>
-              <div class="step pending"><b>Sale &amp; final payment</b><p>Pending — farmer visible share: 38.4/kg</p></div>
+              <div class="step pending"><b>Sale & final payment</b><p>Pending — farmer visible share: 38.4/kg</p></div>
             </div>
             <div class="btn-row">
               <button class="btn btn-ghost btn-sm" type="button" data-toast="Full batch history opened — every step is verifiable by the farmer (demo).">🔍 View full history</button>
@@ -858,12 +786,11 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
         </div>
       </section>
 
-      <!-- ============ FARMER PROFILES ============ -->
       <section class="page" id="page-farmers" aria-label="Farmer profiles">
         <div class="page-head">
           <div>
             <h1 class="page-title">👥 Foundational farmer data</h1>
-            <p class="page-sub">Consent-based, interoperable digital profiles · GPS-tagged plots · connects producers to services &amp; markets.</p>
+            <p class="page-sub">Consent-based, interoperable digital profiles · GPS-tagged plots · connects producers to services & markets.</p>
           </div>
           <div class="tags" style="margin:0"><span class="tag ok">Consent-first</span><span class="tag info">GPS-tagged</span></div>
         </div>
@@ -918,7 +845,6 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
         </div>
       </section>
 
-      <!-- ============ SETTINGS ============ -->
       <section class="page" id="page-settings" aria-label="Settings">
         <div class="page-head">
           <div>
@@ -929,7 +855,7 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 
         <div class="grid grid-2">
           <div class="card">
-            <h3>Branding &amp; naming</h3>
+            <h3>Branding & naming</h3>
             <label class="field"><span>Programme / organisation name</span><input id="cfgProgram" data-set="program" type="text"></label>
             <label class="field"><span>Site 1 — full display name</span><input id="cfgSite1" data-set="site1" type="text" placeholder="e.g. Tupl Agro Advisor · Haruka, Afar"></label>
             <label class="field"><span>Site 1 — short navigation label</span><input id="cfgSite1nav" data-set="site1nav" type="text" placeholder="e.g. Agro Advisory · Afar"></label>
@@ -937,7 +863,7 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
             <label class="field"><span>Site 2 — short navigation label</span><input id="cfgSite2nav" data-set="site2nav" type="text" placeholder="e.g. Value Chain · Jimma"></label>
             <label class="field"><span>Footer organisation</span><input id="cfgOrg" data-set="org" type="text"></label>
             <div class="btn-row">
-              <button class="btn" id="saveCfgBtn" type="button">💾 Save &amp; apply</button>
+              <button class="btn" id="saveCfgBtn" type="button">💾 Save & apply</button>
               <button class="btn btn-outline" id="resetCfgBtn" type="button">↺ Reset to defaults</button>
             </div>
           </div>
@@ -968,7 +894,6 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
   </main>
 </div>
 
-<!-- ===== ZONE REGISTRATION MODAL ===== -->
 <div class="modal-overlay" id="zoneModal" role="dialog" aria-modal="true" aria-labelledby="zoneModalTitle">
   <div class="modal">
     <h3 id="zoneModalTitle">Register crop zone</h3>
@@ -985,6 +910,11 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 
 <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
 
+<!-- CRITICAL FIX: Leaflet, Leaflet.Draw, and Chart.js were missing (only CSS was loaded) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" crossorigin=""></script>
+
 <script>
 (function () {
   'use strict';
@@ -1000,225 +930,199 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
     lng: 40.31325
   };
 
+  var CFG = {};
+  var LS = {
+    get: function (k, fb) {
+      try { var v = localStorage.getItem(k); return v === null ? fb : JSON.parse(v); }
+      catch (e) { return fb; }
+    },
+    set: function (k, v) {
+      try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ }
+    },
+    del: function (k) { try { localStorage.removeItem(k); } catch (e) {} }
+  };
+
+  function esc(s) {
+    return String(s === null || s === undefined ? '' : s)
+      .replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>')
+      .replace(/"/g, '"').replace(/'/g, '&#39;');
+  }
+  function num(v, fb) { var n = parseFloat(v); return isNaN(n) ? fb : n; }
+  function fmt(n) { return Number(n).toLocaleString('en-US'); }
   function el(id) { return document.getElementById(id); }
-  function num(v, fallback) { var n = Number(v); return Number.isFinite(n) ? n : fallback; }
-  function esc(v) { return String(v ?? '').replace(/[&<>"']/g, function (m) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; }); }
-  function setText(id, txt) { var e = el(id); if (e) e.textContent = txt; }
 
-  var CFG = JSON.parse(localStorage.getItem('pilotCfg') || '{}');
-  var DRAW_TOAST_TIMEOUT = 2200;
-  var pageMap = {};
-  var drawnItems = null;
-  var editableLayer = null;
-  var editMode = false;
-  var pendingZone = null;
+  var toastIcons = { ok: '✅', info: 'ℹ️', warn: '⚠️', err: '⛔' };
+  function toast(msg, kind) {
+    kind = kind || 'ok';
+    var box = el('toasts');
+    if (!box) return;
+    var t = document.createElement('div');
+    t.className = 'toast ' + (kind === 'ok' ? '' : kind);
+    t.setAttribute('role', 'status');
+    t.innerHTML = '<span class="t-ico" aria-hidden="true">' + (toastIcons[kind] || '✅') + '</span>' +
+      '<span class="t-msg">' + esc(msg) + '</span>' +
+      '<button class="t-close" type="button" aria-label="Dismiss">✕</button>';
+    box.appendChild(t);
+    var kill = function () {
+      if (!t.parentNode) return;
+      t.classList.add('out');
+      setTimeout(function () { if (t.parentNode) t.parentNode.removeChild(t); }, 220);
+    };
+    t.querySelector('.t-close').addEventListener('click', kill);
+    setTimeout(kill, 4600);
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-toast]');
+    if (b) toast(b.getAttribute('data-toast'), 'ok');
+  });
 
-  function applyCfg() {
-    var cfg = Object.assign({}, DEFAULTS, CFG);
-    document.documentElement.setAttribute('data-theme', cfg.theme || document.documentElement.getAttribute('data-theme') || 'light');
+  var root = document.documentElement;
+  var mql = window.matchMedia('(prefers-color-scheme: dark)');
+  var themePref = LS.get('pilotTheme', 'auto');
+
+  function isDark() {
+    if (themePref === 'dark') return true;
+    if (themePref === 'light') return false;
+    return mql.matches;
+  }
+  function applyTheme() {
+    var dark = isDark();
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    var btn = el('themeBtn');
+    if (btn) {
+      btn.textContent = dark ? '☀️' : '🌙';
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    restyleCharts();
+  }
+  var order = ['auto', 'light', 'dark'];
+  if (el('themeBtn')) {
+    el('themeBtn').addEventListener('click', function () {
+      var cur = themePref;
+      themePref = order[(order.indexOf(cur) + 1) % order.length];
+      LS.set('pilotTheme', themePref);
+      applyTheme();
+      toast('Theme: ' + themePref + (themePref === 'auto' ? ' (follows system)' : ''), 'info');
+    });
+  }
+  if (mql.addEventListener) mql.addEventListener('change', function () { if (themePref === 'auto') applyTheme(); });
+
+  CFG = Object.assign({}, DEFAULTS, LS.get('pilotCfg', {}));
+
+  function applyConfig() {
     document.querySelectorAll('[data-cfg]').forEach(function (node) {
-      var key = node.getAttribute('data-cfg');
-      if (cfg[key] !== undefined && cfg[key] !== null) node.textContent = cfg[key];
+      var k = node.getAttribute('data-cfg');
+      if (k === 'coords') return;
+      if (CFG[k] !== undefined && CFG[k] !== null) node.textContent = CFG[k];
     });
-    var program = cfg.program || DEFAULTS.program;
-    document.title = program + ' — Agro Advisory & Value Chain';
-    document.getElementById('themeBtn').textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    document.getElementById('themeBtn').setAttribute('aria-label', document.documentElement.getAttribute('data-theme') === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    var latIn = el('cfgLat');
-    var lngIn = el('cfgLng');
-    if (latIn) latIn.value = cfg.lat;
-    if (lngIn) lngIn.value = cfg.lng;
-  }
-
-  function saveCfg() {
-    var next = {};
-    document.querySelectorAll('[data-set]').forEach(function (node) {
-      var key = node.getAttribute('data-set');
-      var value = node.value;
-      if (key) next[key] = value;
+    var c = document.querySelector('[data-cfg="coords"]');
+    if (c) c.textContent = 'Lat ' + CFG.lat + ', Lng ' + CFG.lng;
+    document.querySelectorAll('[data-set]').forEach(function (inp) {
+      var k = inp.getAttribute('data-set');
+      if (CFG[k] !== undefined) inp.value = CFG[k];
     });
-    CFG = Object.assign({}, CFG, next);
-    localStorage.setItem('pilotCfg', JSON.stringify(CFG));
-    applyCfg();
-    showToast('Settings saved to this browser.', 'ok');
+    document.title = CFG.program + ' — Agro Advisory & Value Chain';
+    if (window._map && window._map.setView) window._map.setView([num(CFG.lat, DEFAULTS.lat), num(CFG.lng, DEFAULTS.lng)], 15);
   }
-
-  function resetCfg() {
-    CFG = {};
-    localStorage.removeItem('pilotCfg');
-    applyCfg();
-    document.querySelectorAll('[data-set]').forEach(function (node) { node.value = DEFAULTS[node.getAttribute('data-set')] || ''; });
-    showToast('Settings reset to defaults.', 'warn');
+  function saveConfig() {
+    document.querySelectorAll('[data-set]').forEach(function (inp) {
+      var k = inp.getAttribute('data-set');
+      CFG[k] = (k === 'lat' || k === 'lng') ? num(inp.value, DEFAULTS[k]) : inp.value;
+    });
+    LS.set('pilotCfg', CFG);
+    applyConfig();
+    toast('Settings saved and applied across the app.', 'ok');
   }
-
-  function showToast(message, type) {
-    var toastRoot = el('toasts');
-    if (!toastRoot) return;
-    var toast = document.createElement('div');
-    toast.className = 'toast' + (type === 'warn' ? ' warn' : type === 'err' ? ' err' : '');
-    toast.innerHTML = '<div class="t-ico">' + (type === 'warn' ? '⚠️' : type === 'err' ? '⛔' : '✅') + '</div><div>' + esc(message) + '</div><button class="t-close" aria-label="Close notification">×</button>';
-    toastRoot.appendChild(toast);
-    var closeBtn = toast.querySelector('.t-close');
-    if (closeBtn) closeBtn.addEventListener('click', function () { toast.classList.add('out'); setTimeout(function () { toast.remove(); }, 180); });
-    setTimeout(function () { toast.classList.add('out'); setTimeout(function () { toast.remove(); }, 180); }, DRAW_TOAST_TIMEOUT);
+  function resetConfig() {
+    CFG = Object.assign({}, DEFAULTS);
+    LS.del('pilotCfg');
+    applyConfig();
+    toast('Naming reset to defaults.', 'info');
   }
+  el('saveCfgBtn').addEventListener('click', saveConfig);
+  el('resetCfgBtn').addEventListener('click', resetConfig);
 
-  function ensureData() {
-    var STORE = 'pilotDemoData';
-    try {
-      var raw = JSON.parse(localStorage.getItem(STORE) || '{}');
-      if (!raw || typeof raw !== 'object') raw = {};
-      if (!Array.isArray(raw.zones)) raw.zones = [];
-      if (!Array.isArray(raw.deliveries)) raw.deliveries = [];
-      if (!Array.isArray(raw.farmers)) raw.farmers = [];
-      localStorage.setItem(STORE, JSON.stringify(raw));
-      return raw;
-    } catch (e) {
-      return { zones: [], deliveries: [], farmers: [] };
-    }
+  var sidebar = el('sidebar'), scrim = el('scrim'), menuBtn = el('menuBtn');
+
+  function closeDrawer() {
+    if (!sidebar) return;
+    sidebar.classList.remove('open');
+    scrim.classList.remove('show');
+    menuBtn.setAttribute('aria-expanded', 'false');
   }
-
-  function loadData() {
-    return ensureData();
+  function openDrawer() {
+    sidebar.classList.add('open');
+    scrim.classList.add('show');
+    menuBtn.setAttribute('aria-expanded', 'true');
   }
-
-  function saveData(data) {
-    localStorage.setItem('pilotDemoData', JSON.stringify(data));
-  }
-
-  function resetData() {
-    localStorage.removeItem('pilotDemoData');
-    saveData({ zones: [], deliveries: [], farmers: [] });
-    showToast('Demo data reset. Map zones have been cleared.', 'warn');
-    if (typeof renderZoneTable === 'function') renderZoneTable();
-    if (typeof renderTxRows === 'function') renderTxRows();
-    if (typeof renderFarmers === 'function') renderFarmers();
-    if (drawnItems) {
-      drawnItems.clearLayers();
-      setText('zoneCount', '0 zones registered');
-    }
-  }
-
-  function exportData() {
-    var data = loadData();
-    var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url;
-    a.download = 'pilot-demo-data.json';
-    a.click();
-    URL.revokeObjectURL(url);
-    showToast('Demo data exported as JSON.', 'ok');
-  }
-
-  function openPage(name) {
-    document.querySelectorAll('.page').forEach(function (p) { p.classList.toggle('active', p.id === 'page-' + name); });
-    document.querySelectorAll('.nav-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.page === name); b.setAttribute('aria-current', b.dataset.page === name ? 'page' : 'false'); });
-    if (name === 'afar') {
-      setTimeout(function () { if (window._map) window._map.invalidateSize(); }, 120);
-    }
-  }
-
-  document.querySelectorAll('.nav-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () { openPage(btn.dataset.page); });
-  });
-
-  var themeBtn = el('themeBtn');
-  if (themeBtn) themeBtn.addEventListener('click', function () {
-    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    var next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    CFG.theme = next;
-    localStorage.setItem('pilotCfg', JSON.stringify(CFG));
-    applyCfg();
-  });
-
-  var menuBtn = el('menuBtn');
-  var sidebar = el('sidebar');
-  var scrim = el('scrim');
-  if (menuBtn && sidebar) {
+  if (menuBtn) {
     menuBtn.addEventListener('click', function () {
-      var isOpen = sidebar.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-      scrim.classList.toggle('show', isOpen);
+      if (sidebar.classList.contains('open')) closeDrawer(); else openDrawer();
     });
   }
-  if (scrim) scrim.addEventListener('click', function () { sidebar.classList.remove('open'); menuBtn && menuBtn.setAttribute('aria-expanded', 'false'); scrim.classList.remove('show'); });
+  if (scrim) scrim.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeDrawer(); closeZoneModal(true); } });
 
-  function renderZoneTable() {
-    var data = loadData();
-    var tbody = el('zoneRows');
-    var empty = el('zoneEmpty');
-    if (!tbody) return;
-    tbody.innerHTML = '';
-    if (!data.zones || !data.zones.length) {
-      if (empty) empty.style.display = 'block';
-      setText('zoneCount', '0 zones registered');
-      return;
-    }
-    if (empty) empty.style.display = 'none';
-    data.zones.forEach(function (z) {
-      var tr = document.createElement('tr');
-      var area = z.area ? Number(z.area).toFixed(2) : '—';
-      tr.innerHTML = '<td><b>' + esc(z.name || 'Unnamed zone') + '</b></td><td>' + esc(z.crop || '—') + '</td><td>' + area + '</td><td>' + (Array.isArray(z.pts) ? z.pts.length : 0) + '</td><td>' + esc(z.source || 'Manual') + '</td><td><div class="row-actions"><button class="btn btn-ghost btn-sm" type="button" data-del-zone="' + z.id + '">Delete</button></div></td>';
-      tbody.appendChild(tr);
+  function showPage(id, opts) {
+    opts = opts || {};
+    document.querySelectorAll('.page').forEach(function (p) { p.classList.remove('active'); });
+    var target = el('page-' + id);
+    if (!target) return;
+    target.classList.add('active');
+    document.querySelectorAll('.nav-btn').forEach(function (b) {
+      var on = b.getAttribute('data-page') === id;
+      b.classList.toggle('active', on);
+      if (on) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
     });
-    var delButtons = tbody.querySelectorAll('[data-del-zone]');
-    delButtons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var id = Number(btn.getAttribute('data-del-zone'));
-        var data2 = loadData();
-        data2.zones = data2.zones.filter(function (z) { return z.id !== id; });
-        saveData(data2);
-        renderZoneTable();
-        if (drawnItems) {
-          drawnItems.eachLayer(function (layer) {
-            if (layer._zoneId === id) drawnItems.removeLayer(layer);
-          });
+    if (!opts.keepScroll) window.scrollTo({ top: 0, behavior: 'auto' });
+    closeDrawer();
+    if (id === 'afar') {
+      setTimeout(function () {
+        initMap();
+        if (window._map) {
+          try { window._map.invalidateSize(true); } catch (e) {}
         }
-        setText('zoneCount', String(data2.zones.length) + ' zones registered');
-      });
-    });
-    setText('zoneCount', String(data.zones.length) + ' zones registered');
-  }
-
-  function renderTxRows() {
-    var data = loadData();
-    var tbody = el('txRows');
-    if (!tbody) return;
-    tbody.innerHTML = '';
-    if (!data.deliveries || !data.deliveries.length) {
-      tbody.innerHTML = '<tr><td colspan="7" class="table-empty">No transactions yet.</td></tr>';
-      return;
+      }, 160);
     }
-    data.deliveries.slice().reverse().forEach(function (d) {
-      var tr = document.createElement('tr');
-      tr.innerHTML = '<td>' + esc(d.receipt || '—') + '</td><td>' + esc(d.farmer || '—') + '</td><td>' + esc(d.point || '—') + '</td><td>' + esc(d.qty || '0') + '</td><td>' + esc(d.grade || '—') + '</td><td>' + esc(d.price || '0') + '</td><td><span class="tag ok">Paid</span></td>';
-      tbody.appendChild(tr);
-    });
-  }
-
-  function renderFarmers() {
-    var data = loadData();
-    var tbody = el('farmerRows');
-    if (!tbody) return;
-    tbody.innerHTML = '';
-    if (!data.farmers || !data.farmers.length) {
-      tbody.innerHTML = '<tr><td colspan="6" class="table-empty">No farmers registered.</td></tr>';
-      return;
+    if (window.Chart) {
+      Object.keys(charts).forEach(function (k) { var c = charts[k]; if (c) c.resize(); });
     }
-    data.farmers.forEach(function (f) {
-      var tr = document.createElement('tr');
-      tr.innerHTML = '<td>' + esc(f.id || '—') + '</td><td>' + esc(f.name || '—') + '</td><td>' + esc(f.plot || '—') + '</td><td>' + esc(f.lat || '—') + ' / ' + esc(f.lng || '—') + '</td><td>' + esc(f.crop || '—') + '</td><td>' + (f.consent ? '<span class="tag ok">Yes</span>' : '<span class="tag warn">No</span>') + '</td>';
-      tbody.appendChild(tr);
-    });
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
   }
+  document.querySelectorAll('.nav-btn').forEach(function (b) {
+    b.addEventListener('click', function () { showPage(b.getAttribute('data-page')); });
+  });
+  window.showPage = showPage;
+
+  var drawnItems = null, pendingLayer = null, pendingArea = null;
+  var zones = LS.get('pilotZones', []);
+  var zoneSeq = zones.reduce(function (m, z) { return Math.max(m, z.id || 0); }, 0);
+  var mapBooted = false;
 
   function zoneArea(pts) {
     try {
-      var ll = pts.map(function (p) { return L.latLng(p[0], p[1]); });
-      return (L.GeometryUtil.geodesicArea(ll) / 10000).toFixed(2);
+      if (!pts || pts.length < 3) return null;
+      if (typeof L !== 'undefined' && L.GeometryUtil && typeof L.GeometryUtil.geodesicArea === 'function') {
+        var ll = pts.map(function (p) { return L.latLng(p[0], p[1]); });
+        return (L.GeometryUtil.geodesicArea(ll) / 10000).toFixed(2);
+      }
+      var R = 6378137, area = 0, n = pts.length;
+      for (var i = 0; i < n; i++) {
+        var j = (i + 1) % n;
+        var lat1 = pts[i][0] * Math.PI / 180, lon1 = pts[i][1] * Math.PI / 180;
+        var lat2 = pts[j][0] * Math.PI / 180, lon2 = pts[j][1] * Math.PI / 180;
+        area += (lon2 - lon1) * (2 + Math.sin(lat1) + Math.sin(lat2));
+      }
+      return (Math.abs(area * R * R / 2) / 10000).toFixed(2);
     } catch (e) { return null; }
+  }
+
+  function setMapStatus(msg, kind) {
+    var s = el('mapLoadStatus');
+    if (!s) return;
+    if (!msg) { s.style.display = 'none'; s.textContent = ''; return; }
+    s.style.display = 'flex';
+    s.innerHTML = '<span aria-hidden="true">' + (kind === 'err' ? '⛔' : kind === 'ok' ? '✅' : 'ℹ️') + '</span><span>' + msg + '</span>';
   }
 
   function bindZonePopup(layer, z) {
@@ -1246,17 +1150,32 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
 
   function initMap() {
     var mapEl = el('map');
-    if (!mapEl || typeof L === 'undefined') {
-      if (mapEl) mapEl.innerHTML = '<div style="padding:24px;font-size:13px;color:#6b7280;">Map could not load — an internet connection is required for the satellite basemap.</div>';
+    if (!mapEl) return;
+    if (mapBooted && window._map) {
+      setTimeout(function () { try { window._map.invalidateSize(true); } catch (e) {} }, 80);
       return;
     }
+    if (typeof L === 'undefined') {
+      mapEl.innerHTML = '<div style="padding:24px;font-size:13px;color:#6b7280;line-height:1.55;"><b>Map library failed to load.</b><br>Leaflet JS did not load from the CDN. Check network, firewall, or ad-blockers blocking cdnjs.cloudflare.com, then refresh.</div>';
+      setMapStatus('Leaflet JS did not load — map cannot start.', 'err');
+      return;
+    }
+    mapEl.innerHTML = '';
+    setMapStatus('Loading basemap tiles…', 'info');
+
+    var transparentGif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
     var imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      maxZoom: 19, attribution: 'Imagery © Esri, Maxar'
+      maxZoom: 19, attribution: 'Imagery © Esri, Maxar', errorTileUrl: transparentGif
     });
-    var labels = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19 });
+    var labels = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19, opacity: 0.9, errorTileUrl: transparentGif
+    });
     var hybrid = L.layerGroup([imagery, labels]);
-    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19, attribution: '© OpenStreetMap contributors'
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, subdomains: 'abc', attribution: '© OpenStreetMap contributors', errorTileUrl: transparentGif
+    });
+    var carto = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19, subdomains: 'abcd', attribution: '© OpenStreetMap, © CARTO'
     });
 
     var map = L.map(mapEl, {
@@ -1267,360 +1186,818 @@ html[data-theme="dark"] .modal h3{color:var(--green);}
       zoomControl: true
     });
     window._map = map;
+    mapBooted = true;
 
-    var fallbackBasemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OpenStreetMap contributors'
-    });
-
-    var fallbackActive = false;
-    var basemapStatus = document.querySelector('.map-status');
-
-    function setMapStatus(message, isWarning) {
-      if (!basemapStatus) return;
-      basemapStatus.innerHTML = '<span aria-hidden="true">' + (isWarning ? '⚠️' : '🛰️') + '</span><span>' + message + '</span>';
-    }
-
+    var tileErrors = 0;
     imagery.on('tileerror', function () {
-      if (fallbackActive) return;
-      fallbackActive = true;
-      if (map.hasLayer(imagery)) map.removeLayer(imagery);
-      if (!map.hasLayer(fallbackBasemap)) fallbackBasemap.addTo(map);
-      setMapStatus('Satellite basemap unavailable — showing a fallback map instead.', true);
+      tileErrors++;
+      if (tileErrors >= 4 && map.hasLayer(hybrid)) {
+        map.removeLayer(hybrid);
+        if (!map.hasLayer(osm)) {
+          osm.addTo(map);
+          setMapStatus('Satellite tiles blocked — switched to OpenStreetMap. Use layers (top-right) to retry satellite.', 'warn');
+          toast('Satellite basemap unreachable; street map loaded instead.', 'warn');
+        }
+      }
     });
-
-    fallbackBasemap.on('tileerror', function () {
-      setMapStatus('Map tiles are currently unavailable. Drawing tools remain available.', true);
+    function clearStatus() { setMapStatus(null); }
+    osm.on('load', clearStatus);
+    imagery.on('load', clearStatus);
+    map.whenReady(function () {
+      setTimeout(function () {
+        try { map.invalidateSize(true); } catch (e) {}
+        clearStatus();
+      }, 120);
     });
-
-    if (!navigator.onLine) {
-      fallbackActive = true;
-      if (map.hasLayer(imagery)) map.removeLayer(imagery);
-      if (!map.hasLayer(fallbackBasemap)) fallbackBasemap.addTo(map);
-      setMapStatus('Offline mode detected — showing the fallback map without live satellite tiles.', true);
-    } else {
-      setMapStatus('Satellite basemap active.', false);
-    }
 
     L.control.layers(
-      { '🛰️ Hybrid satellite': hybrid, 'Satellite only': imagery, '🗺️ Street map': osm },
+      { '🛰️ Hybrid satellite': hybrid, 'Satellite only': imagery, '🗺️ Street map': osm, '🗺️ Light streets': carto },
       null, { position: 'topright', collapsed: true }
     ).addTo(map);
 
     drawnItems = new L.FeatureGroup();
-    drawnItems.addTo(map);
+    map.addLayer(drawnItems);
 
-    var data = loadData();
-    (data.zones || []).forEach(function (z) {
-      var layer = addZoneLayer(z);
-      if (layer) {
-        layer.on('click', function () {
-          editableLayer = layer;
-          editMode = true;
-          pendingZone = z;
-          openZoneModal(z);
-        });
-      }
-    });
-
-    function openZoneModal(z) {
-      var modal = el('zoneModal');
-      if (!modal) return;
-      el('zName').value = z.name || '';
-      el('zCrop').value = z.crop || '';
-      el('zNotes').value = z.notes || '';
-      el('zAreaInfo').textContent = z.area ? 'Area: ' + z.area + ' ha' : 'Area not available yet';
-      modal.classList.add('show');
-    }
-
-    function closeZoneModal() {
-      var modal = el('zoneModal');
-      if (modal) modal.classList.remove('show');
-      editableLayer = null;
-      editMode = false;
-      pendingZone = null;
-    }
-
-    el('zoneCancel').addEventListener('click', closeZoneModal);
-    el('zoneConfirm').addEventListener('click', function () {
-      if (!pendingZone || !editableLayer) return;
-      var name = el('zName').value.trim();
-      var crop = el('zCrop').value.trim();
-      var notes = el('zNotes').value.trim();
-      var data2 = loadData();
-      data2.zones = (data2.zones || []).map(function (z) {
-        if (z.id !== pendingZone.id) return z;
-        z.name = name || 'Unnamed zone';
-        z.crop = crop || 'Unspecified';
-        z.notes = notes;
-        z.area = zoneArea(z.pts) || z.area || '0.00';
-        z.source = 'Edited';
-        return z;
+    if (typeof L.Control.Draw !== 'undefined') {
+      var drawControl = new L.Control.Draw({
+        position: 'topleft',
+        draw: {
+          marker: true,
+          polygon: { allowIntersection: false, showArea: true, shapeOptions: { color: '#2e7d32', fillColor: '#f9a825', fillOpacity: 0.25 } },
+          polyline: false,
+          circle: false,
+          circlemarker: false,
+          rectangle: { shapeOptions: { color: '#2e7d32', fillColor: '#f9a825', fillOpacity: 0.25 } }
+        },
+        edit: { featureGroup: drawnItems, edit: true, remove: true }
       });
-      saveData(data2);
-      renderZoneTable();
-      closeZoneModal();
-      showToast('Zone updated.', 'ok');
-    });
-
-    function rebuildZoneCount() {
-      var count = (loadData().zones || []).length;
-      setText('zoneCount', String(count) + ' zones registered');
+      map.addControl(drawControl);
     }
 
-    L.Control.Draw = L.Control.extend({
-      options: { position: 'topleft' },
-      onAdd: function () {
-        var div = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
-        var group = L.DomUtil.create('div', 'leaflet-control-layers leaflet-control-layers-expanded');
-        var addBtn = L.DomUtil.create('button', 'leaflet-control-layers-toggle', group);
-        addBtn.type = 'button';
-        addBtn.innerHTML = '✏️';
-        addBtn.title = 'Draw zone';
-        addBtn.addEventListener('click', function () {
-          showToast('Use the polygon marker tools on the map to draw a zone.', 'ok');
-        });
-        div.appendChild(group);
-        return div;
-      }
-    });
-
-    if (window.L && L.Control && L.Control.Draw) {
-      // noop to keep compatibility with existing app logic below
-    }
-
-    var drawControl = new L.Control.Draw({
-      position: 'topleft',
-      draw: {
-        polygon: { allowIntersection: false, showArea: true, drawError: { color: '#e53935', timeout: 2500 } },
-        polyline: false,
-        circle: false,
-        marker: true,
-        rectangle: false,
-        circlemarker: false,
-        polygon: true
-      },
-      edit: {
-        featureGroup: drawnItems,
-        remove: true
-      }
-    });
-
-    map.addControl(drawControl);
-
-    map.on(L.Draw.Event.CREATED, function (event) {
-      var layer = event.layer;
-      var coords = layer.getLatLngs ? layer.getLatLngs() : [layer.getLatLng()];
-      var points = Array.isArray(coords[0]) ? coords[0].map(function (p) { return [p.lat, p.lng]; }) : [[coords[0].lat, coords[0].lng]];
-      var area = zoneArea(points) || '0.00';
-      var data2 = loadData();
-      var id = (data2.zones || []).reduce(function (m, z) { return Math.max(m, z.id || 0); }, 0) + 1;
-      var payload = {
-        id: id,
-        name: 'New zone ' + id,
-        crop: 'Unspecified',
-        notes: '',
-        area: area,
-        pts: points,
-        source: 'Map draw'
-      };
-      data2.zones.push(payload);
-      saveData(data2);
-      layer._zoneId = id;
-      layer.addTo(drawnItems);
-      bindZonePopup(layer, payload);
-      layer.on('click', function () {
-        editableLayer = layer;
-        pendingZone = payload;
-        editMode = true;
-        openZoneModal(payload);
-      });
-      renderZoneTable();
-      rebuildZoneCount();
-      showToast('New zone added.', 'ok');
-      openZoneModal(payload);
+    if (typeof L.Draw === 'undefined' || !L.Draw.Event) {
+      console.warn('[map] leaflet.draw unavailable — drawing disabled');
+    } else {
+    map.on(L.Draw.Event.CREATED, function (e) {
+      pendingLayer = e.layer;
+      drawnItems.addLayer(pendingLayer);
+      var isPoly = (e.layerType === 'polygon' || e.layerType === 'rectangle');
+      var pts = isPoly
+        ? pendingLayer.getLatLngs()[0].map(function (ll) { return [ll.lat, ll.lng]; })
+        : [[pendingLayer.getLatLng().lat, pendingLayer.getLatLng().lng]];
+      pendingArea = isPoly ? zoneArea(pts) : null;
+      el('zName').value = '';
+      el('zCrop').value = '';
+      el('zNotes').value = '';
+      el('zAreaInfo').textContent = pendingArea
+        ? 'Drawn area: ' + pendingArea + ' ha — name this zone to register it.'
+        : 'Point marker drawn — name this point to register it.';
+      el('zoneModal').classList.add('show');
+      setTimeout(function () { el('zName').focus(); }, 120);
     });
 
     map.on(L.Draw.Event.EDITED, function () {
-      var data2 = loadData();
       drawnItems.eachLayer(function (layer) {
         if (!layer._zoneId) return;
-        data2.zones = (data2.zones || []).map(function (z) {
-          if (z.id !== layer._zoneId) return z;
-          var pts = layer.getLatLngs ? (Array.isArray(layer.getLatLngs()[0]) ? layer.getLatLngs()[0].map(function (p) { return [p.lat, p.lng]; }) : layer.getLatLngs().map(function (p) { return [p.lat, p.lng]; })) : [[layer.getLatLng().lat, layer.getLatLng().lng]];
-          z.pts = pts;
-          z.area = zoneArea(pts) || z.area || '0.00';
-          return z;
-        });
+        var z = zones.find(function (x) { return x.id === layer._zoneId; });
+        if (!z) return;
+        if (layer.getLatLngs) {
+          var ll = layer.getLatLngs();
+          var ring = Array.isArray(ll[0]) ? ll[0] : ll;
+          z.pts = ring.map(function (p) { return [p.lat, p.lng]; });
+          if (z.pts.length >= 3) z.area = zoneArea(z.pts);
+        } else if (layer.getLatLng) {
+          var c = layer.getLatLng();
+          z.pts = [[c.lat, c.lng]];
+          z.area = null;
+        }
+        bindZonePopup(layer, z);
       });
-      saveData(data2);
-      renderZoneTable();
-      showToast('Zone boundaries updated.', 'ok');
+      persistZones();
+      renderZones();
+      toast('Shape updated — area and point count recalculated.', 'ok');
     });
 
-    map.on(L.Draw.Event.DELETED, function (event) {
-      var ids = event.layers && event.layers.getLayers ? event.layers.getLayers().map(function (layer) { return layer._zoneId; }).filter(Boolean) : [];
-      if (!ids.length) return;
-      var data2 = loadData();
-      data2.zones = (data2.zones || []).filter(function (z) { return ids.indexOf(z.id) === -1; });
-      saveData(data2);
-      renderZoneTable();
-      rebuildZoneCount();
-      showToast('Zones removed.', 'warn');
+    map.on(L.Draw.Event.DELETED, function () {
+      var alive = {};
+      drawnItems.eachLayer(function (l) { if (l._zoneId) alive[l._zoneId] = true; });
+      var before = zones.length;
+      zones = zones.filter(function (z) { return alive[z.id]; });
+      persistZones();
+      renderZones();
+      if (before !== zones.length) toast((before - zones.length) + ' zone(s) removed from the registry.', 'warn');
     });
 
-    function updateMapTheme() {
-      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      var bg = isDark ? '#0d1a23' : '#dfe7e0';
-      mapEl.style.background = bg;
     }
-    updateMapTheme();
-    var observer = new MutationObserver(updateMapTheme);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    window._mapObserver = observer;
 
-    window._map = map;
+    zones.forEach(function (z) { addZoneLayer(z); });
+    if (zones.length) {
+      var all = [];
+      zones.forEach(function (z) { (z.pts || []).forEach(function (p) { all.push(p); }); });
+      if (all.length) {
+        try { map.fitBounds(L.latLngBounds(all).pad(0.25)); } catch (e) {}
+      }
+    }
   }
 
-  function init() {
-    applyCfg();
-    var saveBtn = el('saveCfgBtn');
-    if (saveBtn) saveBtn.addEventListener('click', saveCfg);
-    var resetBtn = el('resetCfgBtn');
-    if (resetBtn) resetBtn.addEventListener('click', resetCfg);
-    var exportBtn = el('exportDataBtn');
-    if (exportBtn) exportBtn.addEventListener('click', exportData);
-    var resetDataBtn = el('resetDataBtn');
-    if (resetDataBtn) resetDataBtn.addEventListener('click', resetData);
-    document.querySelectorAll('[data-toast]').forEach(function (elBtn) {
-      elBtn.addEventListener('click', function () { showToast(elBtn.getAttribute('data-toast'), 'ok'); });
+  function persistZones() { LS.set('pilotZones', zones); }
+
+  function closeZoneModal(silent) {
+    var m = el('zoneModal');
+    if (!m || !m.classList.contains('show')) return;
+    m.classList.remove('show');
+    if (!silent && pendingLayer && drawnItems) {
+      drawnItems.removeLayer(pendingLayer);
+    }
+    pendingLayer = null;
+    pendingArea = null;
+  }
+  el('zoneCancel').addEventListener('click', function () { closeZoneModal(); });
+  el('zoneModal').addEventListener('click', function (e) { if (e.target === el('zoneModal')) closeZoneModal(); });
+
+  el('zoneConfirm').addEventListener('click', function () {
+    if (!pendingLayer) { closeZoneModal(); return; }
+    var nameEl = el('zName');
+    var name = nameEl.value.trim() || ('Zone ' + (zoneSeq + 1));
+    var crop = el('zCrop').value.trim() || '—';
+    var notes = el('zNotes').value.trim();
+    var isPoly = !!pendingLayer.getLatLngs;
+    var pts = isPoly
+      ? pendingLayer.getLatLngs()[0].map(function (ll) { return [ll.lat, ll.lng]; })
+      : [[pendingLayer.getLatLng().lat, pendingLayer.getLatLng().lng]];
+
+    var z = { id: ++zoneSeq, name: name, crop: crop, area: pendingArea, pts: pts, source: 'Drawn', notes: notes };
+    zones.push(z);
+    pendingLayer._zoneId = z.id;
+    bindZonePopup(pendingLayer, z);
+    pendingLayer = null;
+    el('zoneModal').classList.remove('show');
+    persistZones();
+    renderZones();
+    toast('Zone “' + name + '” registered' + (pendingArea ? ' · ' + pendingArea + ' ha' : '') + '.', 'ok');
+  });
+
+  function renderZones() {
+    var tbody = el('zoneRows');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    zones.forEach(function (z) {
+      var tr = document.createElement('tr');
+      var tdName = document.createElement('td');
+      var b = document.createElement('b'); b.textContent = z.name; tdName.appendChild(b);
+      if (z.notes) {
+        var n = document.createElement('div');
+        n.className = 'muted-sm'; n.textContent = z.notes;
+        tdName.appendChild(n);
+      }
+      tr.appendChild(tdName);
+
+      var tdCrop = document.createElement('td'); tdCrop.textContent = z.crop || '—'; tr.appendChild(tdCrop);
+      var tdArea = document.createElement('td'); tdArea.textContent = z.area ? z.area : '—'; tr.appendChild(tdArea);
+      var tdPts = document.createElement('td'); tdPts.textContent = (z.pts || []).length; tr.appendChild(tdPts);
+
+      var tdSrc = document.createElement('td');
+      var tag = document.createElement('span');
+      tag.className = 'tag ' + (z.source === 'CSV' ? 'info' : 'ok');
+      tag.textContent = z.source;
+      tdSrc.appendChild(tag);
+      tr.appendChild(tdSrc);
+
+      var tdAct = document.createElement('td');
+      var box = document.createElement('div'); box.className = 'row-actions';
+      var zoom = document.createElement('button');
+      zoom.className = 'btn btn-sm btn-ghost'; zoom.type = 'button'; zoom.textContent = 'Zoom';
+      zoom.addEventListener('click', function () { zoomZone(z.id); });
+      var del = document.createElement('button');
+      del.className = 'btn btn-sm btn-danger'; del.type = 'button';
+      del.setAttribute('aria-label', 'Remove ' + z.name); del.textContent = '✕';
+      del.addEventListener('click', function () { removeZone(z.id); });
+      box.appendChild(zoom); box.appendChild(del);
+      tdAct.appendChild(box);
+      tr.appendChild(tdAct);
+
+      tbody.appendChild(tr);
     });
-    document.querySelectorAll('[data-ask]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var input = el('chatInput');
-        if (input) input.value = btn.getAttribute('data-ask');
+    var n = zones.length;
+    el('zoneEmpty').style.display = n ? 'none' : 'block';
+    el('zoneCount').textContent = n + ' zone' + (n === 1 ? '' : 's') + ' registered';
+  }
+
+  function zoomZone(id) {
+    if (!window._map || !drawnItems) return;
+    var layer = null;
+    drawnItems.eachLayer(function (l) { if (l._zoneId === id) layer = l; });
+    if (!layer) {
+      var z = zones.find(function (x) { return x.id === id; });
+      if (z && z.pts && z.pts.length) window._map.fitBounds(L.latLngBounds(z.pts).pad(0.4));
+      return;
+    }
+    if (layer.getBounds) window._map.fitBounds(layer.getBounds().pad(0.4));
+    else if (layer.getLatLng) window._map.setView(layer.getLatLng(), 17);
+    layer.openPopup();
+  }
+
+  function removeZone(id) {
+    if (drawnItems) {
+      var kill = null;
+      drawnItems.eachLayer(function (l) { if (l._zoneId === id) kill = l; });
+      if (kill) drawnItems.removeLayer(kill);
+    }
+    zones = zones.filter(function (z) { return z.id !== id; });
+    persistZones();
+    renderZones();
+    toast('Zone removed from map and registry.', 'warn');
+  }
+
+  if (el('importBtn')) el('importBtn').addEventListener('click', function () { el('csvInput').click(); });
+
+  el('csvInput').addEventListener('change', function () {
+    var file = this.files && this.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function (ev) {
+      var lines = String(ev.target.result).replace(/^\uFEFF/, '').trim().split(/\r?\n/);
+      var groups = {}, order = [];
+      lines.forEach(function (ln, i) {
+        if (!ln.trim()) return;
+        var c = ln.split(',').map(function (s) { return s.trim().replace(/^"|"$/g, ''); });
+        if (c.length < 4) return;
+        if (i === 0 && /lat/i.test(c[2]) && /(lng|lon)/i.test(c[3])) return;
+        var lat = parseFloat(c[2]), lng = parseFloat(c[3]);
+        if (isNaN(lat) || isNaN(lng)) return;
+        var name = c[0] || ('Imported ' + (order.length + 1));
+        var crop = c[1] || '—';
+        if (!groups[name]) { groups[name] = { name: name, crop: crop, pts: [] }; order.push(name); }
+        groups[name].pts.push([lat, lng]);
       });
-    });
-    var chatSend = el('chatSend');
-    if (chatSend) chatSend.addEventListener('click', function () {
-      var input = el('chatInput');
-      var value = input ? input.value.trim() : '';
-      if (!value) return;
-      var box = el('chatBox');
-      var user = document.createElement('div');
-      user.className = 'msg user';
-      user.textContent = value;
-      box.appendChild(user);
-      input.value = '';
-      setTimeout(function () {
-        var ai = document.createElement('div');
-        ai.className = 'msg ai';
-        ai.textContent = 'AI suggestion: Based on the current field conditions, the highest-priority action is to review the low-germination zones in the eastern command area and schedule a targeted field inspection within 48 hours.';
-        box.appendChild(ai);
-        box.scrollTop = box.scrollHeight;
-      }, 300);
-    });
-    document.getElementById('importBtn')?.addEventListener('click', function () {
-      document.getElementById('csvInput').click();
-    });
-    document.getElementById('csvInput')?.addEventListener('change', function (event) {
-      var file = event.target.files && event.target.files[0];
-      if (!file) return;
-      var reader = new FileReader();
-      reader.onload = function () {
-        var rows = String(reader.result).split(/\r?\n/).filter(Boolean);
-        var parsed = [];
-        rows.forEach(function (line) {
-          var cells = line.split(',');
-          if (cells.length >= 4) parsed.push({ name: cells[0], crop: cells[1], lat: Number(cells[2]), lng: Number(cells[3]) });
-        });
-        if (!parsed.length) return showToast('CSV is empty or invalid.', 'err');
-        var data2 = loadData();
-        parsed.forEach(function (row, index) {
-          var pts = [[row.lat, row.lng]];
-          if (index > 0 && parsed[index - 1].name === row.name) {
-            pts = [[row.lat, row.lng]];
-          }
-          data2.zones.push({ id: Date.now() + index, name: row.name || 'Imported zone', crop: row.crop || 'Unspecified', notes: '', area: '0.00', pts: pts, source: 'CSV import' });
-        });
-        saveData(data2);
-        renderZoneTable();
-        showToast('CSV import complete.', 'ok');
-      };
-      reader.readAsText(file);
-    });
-    document.getElementById('exportBtn')?.addEventListener('click', function () {
-      var data = loadData();
-      var out = (data.zones || []).map(function (z) { return [z.name, z.crop, (z.pts || [[0,0]])[0][0], (z.pts || [[0,0]])[0][1]].join(','); }).join('\n');
-      var blob = new Blob([out], { type: 'text/csv' });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = 'pilot-zones.csv';
-      a.click();
-      URL.revokeObjectURL(url);
-      showToast('Zone CSV exported.', 'ok');
-    });
-    document.getElementById('clearBtn')?.addEventListener('click', function () {
-      var data2 = loadData();
-      data2.zones = [];
-      saveData(data2);
-      if (drawnItems) drawnItems.clearLayers();
-      renderZoneTable();
-      showToast('All zones cleared.', 'warn');
-    });
-    var addDeliveryBtn = el('addDeliveryBtn');
-    if (addDeliveryBtn) addDeliveryBtn.addEventListener('click', function () {
-      var farmer = el('dFarmer').value.trim();
-      var qty = Number(el('dQty').value || 0);
-      var grade = el('dGrade').value;
-      var price = Number(el('dPrice').value || 0);
-      var point = el('dPoint').value;
-      if (!farmer || !qty) return showToast('Enter a farmer name and quantity before saving.', 'err');
-      var data2 = loadData();
-      var entry = {
-        receipt: 'R-' + String(Date.now()).slice(-6),
-        farmer: farmer,
-        point: point,
-        qty: qty,
-        grade: grade,
-        price: price,
-        status: 'Paid'
-      };
-      data2.deliveries.push(entry);
-      saveData(data2);
-      renderTxRows();
-      showToast('Delivery recorded successfully.', 'ok');
-      el('dFarmer').value = '';
-      el('dQty').value = '';
-      el('dPrice').value = '';
-    });
-    var issueReceiptBtn = el('issueReceiptBtn');
-    if (issueReceiptBtn) issueReceiptBtn.addEventListener('click', function () {
-      showToast('Receipt generated for the selected delivery.', 'ok');
-    });
-    var addFarmerBtn = el('addFarmerBtn');
-    if (addFarmerBtn) addFarmerBtn.addEventListener('click', function () {
-      var name = el('fName').value.trim();
-      var plot = el('fPlot').value.trim();
-      var lat = Number(el('fLat').value);
-      var lng = Number(el('fLng').value);
-      var crop = el('fCrop').value;
-      var consent = el('fConsent').checked;
-      if (!name || !plot || !Number.isFinite(lat) || !Number.isFinite(lng)) return showToast('Enter the farmer name, plot, latitude and longitude.', 'err');
-      var data2 = loadData();
-      data2.farmers.push({ id: 'F-' + String(data2.farmers.length + 1).padStart(3, '0'), name: name, plot: plot, lat: lat, lng: lng, crop: crop, consent: consent });
-      saveData(data2);
-      renderFarmers();
-      showToast('Farmer registered.', 'ok');
-    });
-    renderZoneTable();
-    renderTxRows();
-    renderFarmers();
-    initMap();
+      var count = 0;
+      order.forEach(function (nm) {
+        var g = groups[nm];
+        var area = g.pts.length >= 3 ? zoneArea(g.pts) : null;
+        var z = { id: ++zoneSeq, name: g.name, crop: g.crop, area: area, pts: g.pts, source: 'CSV', notes: '' };
+        zones.push(z);
+        addZoneLayer(z);
+        count++;
+      });
+      persistZones();
+      renderZones();
+      if (count) {
+        var all = [];
+        zones.forEach(function (z) { (z.pts || []).forEach(function (p) { all.push(p); }); });
+        if (all.length && window._map) window._map.fitBounds(L.latLngBounds(all).pad(0.2));
+        toast(count + ' zone(s) imported from CSV.', 'ok');
+      } else {
+        toast('No valid rows found. Expected: name,crop,lat,lng', 'err');
+      }
+    };
+    reader.readAsText(file);
+    this.value = '';
+  });
+
+  function csvCell(s) {
+    s = String(s === null || s === undefined ? '' : s);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
   }
 
-  init();
+  el('exportBtn').addEventListener('click', function () {
+    if (!zones.length) { toast('No zones to export yet.', 'warn'); return; }
+    var rows = ['name,crop,lat,lng'];
+    zones.forEach(function (z) {
+      (z.pts || []).forEach(function (p) { rows.push([csvCell(z.name), csvCell(z.crop), p[0], p[1]].join(',')); });
+    });
+    var blob = new Blob([rows.join('\n')], { type: 'text/csv;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'crop_zones.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+    toast(zones.length + ' zone(s) exported to CSV.', 'ok');
+  });
+
+  el('clearBtn').addEventListener('click', function () {
+    if (!zones.length) { toast('The map is already empty.', 'info'); return; }
+    if (!window.confirm('Remove all drawn and imported zones from the map?')) return;
+    if (drawnItems) drawnItems.clearLayers();
+    zones = [];
+    persistZones();
+    renderZones();
+    toast('All zones cleared.', 'warn');
+  });
+
+  var charts = {};
+  function cssVar(name, fb) {
+    var v = getComputedStyle(root).getPropertyValue(name);
+    return (v && v.trim()) || fb;
+  }
+  function chartThemeColors() {
+    return {
+      text: cssVar('--muted', '#6b7280'),
+      ink: cssVar('--ink-2', '#374151'),
+      grid: cssVar('--line', '#e4e9e6'),
+      card: cssVar('--card', '#ffffff'),
+      green: cssVar('--green', '#2e7d32'),
+      red: cssVar('--red', '#c62828'),
+      amber: cssVar('--amber', '#f9a825'),
+      blue: cssVar('--blue', '#1565c0'),
+      purple: cssVar('--purple', '#6a1b9a')
+    };
+  }
+  function restyleCharts() {
+    if (!window.Chart) return;
+    var c = chartThemeColors();
+    Object.keys(charts).forEach(function (k) {
+      var ch = charts[k];
+      if (!ch || !ch.options) return;
+      ch.options.color = c.text;
+      var scales = ch.options.scales || {};
+      Object.keys(scales).forEach(function (sk) {
+        var sc = scales[sk];
+        if (!sc) return;
+        sc.ticks = Object.assign({}, sc.ticks, { color: c.text });
+        sc.grid = Object.assign({}, sc.grid, { color: c.grid, borderColor: c.grid });
+        if (sc.title) sc.title.color = c.text;
+        if (sc.pointLabels) sc.pointLabels.color = c.text;
+        if (sc.angleLines) sc.angleLines.color = c.grid;
+      });
+      if (ch.options.plugins && ch.options.plugins.legend && ch.options.plugins.legend.labels) {
+        ch.options.plugins.legend.labels.color = c.text;
+      }
+      ch.update('none');
+    });
+  }
+
+  var chartsBooted = false;
+  function initCharts() {
+    if (chartsBooted || typeof Chart === 'undefined') return;
+    chartsBooted = true;
+    Chart.defaults.font.family = "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
+    Chart.defaults.font.size = 11;
+    var c = chartThemeColors();
+
+    var gauss = [];
+    for (var x = 0; x <= 10; x += 0.2) { gauss.push({ x: x, y: Math.exp(-Math.pow(x - 5, 2) / 7.5) }); }
+    var stageDefs = [
+      { x: 1.0, key: 'sowing', name: 'Sowing date optimization' },
+      { x: 3.0, key: 'fert1', name: 'Fertilization strategy · Round 1' },
+      { x: 4.5, key: 'pest1', name: 'Pest, disease & weed · Round 1' },
+      { x: 5.7, key: 'fert2', name: 'Fertilization strategy · Round 2' },
+      { x: 7.0, key: 'pest2', name: 'Pest, disease & weed · Round 2' },
+      { x: 9.0, key: 'yield', name: 'Yield estimation (pre-harvest)' }
+    ];
+    var stagePts = stageDefs.map(function (s) {
+      return { x: s.x, y: Math.exp(-Math.pow(s.x - 5, 2) / 7.5), n: s.name };
+    });
+    var numPlugin = {
+      afterDatasetsDraw: function (chart) {
+        var ctx = chart.ctx, meta = chart.getDatasetMeta(1);
+        ctx.save();
+        ctx.font = '700 9px Inter, system-ui, sans-serif';
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        meta.data.forEach(function (pt, i) {
+          if (!pt) return;
+          var r = 8;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y - 15, r, 0, Math.PI * 2);
+          ctx.fillStyle = cssVar('--red-light', '#ffebee');
+          ctx.fill();
+          ctx.strokeStyle = cssVar('--red', '#c62828');
+          ctx.lineWidth = 1.4;
+          ctx.stroke();
+          ctx.fillStyle = cssVar('--red', '#c62828');
+          ctx.fillText(String(i + 1), pt.x, pt.y - 14.5);
+        });
+        ctx.restore();
+      }
+    };
+
+    charts.cycle = new Chart(el('chCycle'), {
+      type: 'line',
+      data: {
+        datasets: [
+          { label: 'Activity level (satellite & climatic data)', data: gauss, borderColor: c.text, borderWidth: 2, borderDash: [6, 5], pointRadius: 0, tension: 0.4, fill: false },
+          { type: 'scatter', label: 'Key agronomic stages', data: stagePts, pointStyle: 'crossRot', pointRadius: 8, pointHoverRadius: 10, borderColor: c.red, backgroundColor: c.red, borderWidth: 2 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, animation: { duration: 500 },
+        interaction: { mode: 'nearest', intersect: true },
+        layout: { padding: { top: 22, right: 8, left: 0, bottom: 0 } },
+        scales: {
+          x: {
+            type: 'linear', min: 0, max: 10,
+            title: { display: true, text: 'Agronomic cycle (months)', color: c.text, font: { size: 10.5 } },
+            ticks: { stepSize: 1, color: c.text, font: { size: 10 } },
+            grid: { color: c.grid }
+          },
+          y: {
+            min: 0, max: 1.15,
+            title: { display: true, text: 'Activity level', color: c.text, font: { size: 10.5 } },
+            ticks: { color: c.text, font: { size: 10 }, stepSize: 0.25 },
+            grid: { color: c.grid }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) {
+                if (ctx.datasetIndex === 1) return (ctx.dataIndex + 1) + '. ' + ctx.raw.n.replace(/&/g, '&');
+                return 'Activity: ' + ctx.raw.y.toFixed(2);
+              }
+            }
+          }
+        }
+      },
+      plugins: [numPlugin]
+    });
+
+    var legend = el('cycleLegend');
+    if (legend) {
+      legend.innerHTML = stageDefs.map(function (s, i) {
+        return '<li><span class="n">' + (i + 1) + '</span><span>' + s.name + '</span></li>';
+      }).join('');
+    }
+
+    charts.germ = new Chart(el('chGerm'), {
+      type: 'bar',
+      data: {
+        labels: ['Zone A', 'Zone B', 'Zone C', 'Zone D', 'Zone E'],
+        datasets: [
+          { label: 'Expected germination', data: [80, 80, 80, 80, 80], backgroundColor: 'rgba(46,125,50,.18)', borderColor: c.green, borderWidth: 1, borderRadius: 4, barPercentage: 0.72 },
+          {
+            label: 'NDVI actual coverage', data: [78, 74, 66, 52, 58],
+            backgroundColor: function (ctx) { return ctx.raw < 65 ? 'rgba(198,40,40,.82)' : 'rgba(46,125,50,.82)'; },
+            borderRadius: 4, barPercentage: 0.72
+          }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { ticks: { color: c.text, font: { size: 10 } }, grid: { display: false } },
+          y: { min: 0, max: 100, ticks: { color: c.text, font: { size: 10 }, callback: function (v) { return v + '%'; } }, grid: { color: c.grid }, title: { display: true, text: 'Crop coverage (%)', color: c.text, font: { size: 10.5 } } }
+        },
+        plugins: { legend: { labels: { color: c.text, boxWidth: 10, boxHeight: 10, usePointStyle: true, font: { size: 10 } }, position: 'bottom' } }
+      }
+    });
+
+    charts.nutrition = new Chart(el('chNutrition'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Minimum (severe deficit)', 'Intermediate', 'Maximum'],
+        datasets: [{ data: [34, 41, 25], backgroundColor: ['#c62828', '#f9a825', '#2e7d32'], borderWidth: 2, borderColor: c.card, hoverOffset: 6 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '58%',
+        plugins: {
+          legend: revLegend(c),
+          tooltip: { callbacks: { label: function (ctx) { return ctx.label + ': ' + ctx.raw + '%'; } } }
+        }
+      }
+    });
+
+    charts.ndvi = new Chart(el('chNDVI'), {
+      type: 'line',
+      data: {
+        labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        datasets: [
+          { label: 'Plot 1', data: [0.31, 0.34, 0.38, 0.45, 0.55, 0.62, 0.66, 0.61, 0.55, 0.48, 0.42, 0.36], borderColor: '#2e7d32', backgroundColor: 'rgba(46,125,50,.12)', fill: true, tension: 0.35, borderWidth: 2, pointRadius: 2, pointHoverRadius: 5 },
+          { label: 'Plot 2', data: [0.28, 0.30, 0.33, 0.38, 0.44, 0.50, 0.53, 0.50, 0.44, 0.39, 0.35, 0.30], borderColor: '#f9a825', backgroundColor: 'rgba(249,168,37,.10)', fill: true, tension: 0.35, borderWidth: 2, pointRadius: 2, pointHoverRadius: 5 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        scales: {
+          x: { ticks: { color: c.text, font: { size: 9.5 }, maxRotation: 0, autoSkipPadding: 8 }, grid: { display: false } },
+          y: { min: 0.2, max: 0.75, ticks: { color: c.text, font: { size: 10 } }, grid: { color: c.grid }, title: { display: true, text: 'NDVI', color: c.text, font: { size: 10.5 } } }
+        },
+        plugins: { legend: revLegend(c) }
+      }
+    });
+
+    charts.climate = new Chart(el('chClimate'), {
+      type: 'bar',
+      data: {
+        labels: ['D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'D10', 'D11', 'D12', 'D13', 'D14'],
+        datasets: [
+          { type: 'line', label: 'Temp (°C)', data: [11, 13, 16, 20, 23, 25, 24, 22, 18, 15, 12, 10, 12, 14], borderColor: c.red, backgroundColor: c.red, borderWidth: 2, tension: 0.35, pointRadius: 2, yAxisID: 'y' },
+          { type: 'bar', label: 'Humidity (%)', data: [41, 38, 34, 29, 25, 23, 24, 27, 33, 38, 43, 46, 44, 40], backgroundColor: 'rgba(21,101,192,.55)', borderRadius: 4, barPercentage: 0.72, yAxisID: 'y1' }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        scales: {
+          x: { ticks: { color: c.text, font: { size: 9 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 7 }, grid: { display: false } },
+          y: { position: 'left', ticks: { color: c.text, font: { size: 10 } }, grid: { color: c.grid }, title: { display: true, text: '°C', color: c.text, font: { size: 10.5 } } },
+          y1: { position: 'right', min: 0, max: 100, ticks: { color: c.text, font: { size: 10 } }, grid: { display: false }, title: { display: true, text: '%', color: c.text, font: { size: 10.5 } } }
+        },
+        plugins: { legend: revLegend(c) }
+      }
+    });
+
+    charts.soil = new Chart(el('chSoil'), {
+      type: 'radar',
+      data: {
+        labels: ['Nitrogen', 'Phosphorus', 'Potassium', 'Organic matter', 'Moisture', 'pH balance'],
+        datasets: [
+          { label: 'Plot 1', data: [72, 65, 58, 70, 76, 68], borderColor: '#2e7d32', backgroundColor: 'rgba(46,125,50,.18)', borderWidth: 2, pointRadius: 2.5 },
+          { label: 'Plot 2', data: [48, 52, 60, 55, 50, 62], borderColor: '#f9a825', backgroundColor: 'rgba(249,168,37,.16)', borderWidth: 2, pointRadius: 2.5 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: { r: { min: 0, max: 100, ticks: { color: c.text, backdropColor: 'transparent', font: { size: 9 }, stepSize: 25 }, grid: { color: c.grid }, angleLines: { color: c.grid }, pointLabels: { color: c.text, font: { size: 9.5 } } } },
+        plugins: { legend: revLegend(c) }
+      }
+    });
+  }
+  function revLegend(c) {
+    return { position: 'bottom', labels: { color: c.text, boxWidth: 10, boxHeight: 10, usePointStyle: true, font: { size: 10 }, padding: 12 } };
+  }
+
+  var ANSWERS = [
+    {
+      k: ['sow', 'plant', 'seed', 'date'],
+      a: 'Sowing optimization: soil moisture is at 61% of field capacity and frost risk is low. The optimal sowing window opens in about 10 days — apply pre-plant irrigation 5 days before. Confirm the final date with your extension agent.'
+    },
+    {
+      k: ['germin', 'reseed', 'gap', 'emerg'],
+      a: 'Germination mapping: expected emergence is 80%, but NDVI shows only 52% coverage in Zone D and 58% in Zone E. Recommendation: precision-reseed roughly 20% of the field in those zones — it saves seed, labour and water compared with full-field reseeding.'
+    },
+    {
+      k: ['fert', 'nitrogen', 'nutrient', 'urea', 'dose'],
+      a: 'Fertilization: 34% of the command area is in the Minimum nutrition zone. Use the variable-rate prescription map, target the south-east blocks of Plot 1 first, and cut the Round 2 dose by about 15% in Zone B after the strong Round 1 response. Avoid application before rain or high wind — 15–30% input savings are realistic.'
+    },
+    {
+      k: ['pest', 'weed', 'disease', 'stress', 'fung', 'insect'],
+      a: 'Crop protection: an early stress signature is visible in Zone C (NDVI −0.08 versus baseline). Inspect within 48 hours and spot-treat rather than spraying the whole field. A neem-based option is appropriate if the threshold is exceeded.'
+    },
+    {
+      k: ['yield', 'market', 'price', 'harvest', 'quality'],
+      a: 'Pre-harvest estimate: 4.8 t/ha, protein 12.1%, humidity 11.8%. Indicative price is ETB 41–44/kg on that quality. Align drying capacity, transport and cold chain now so the crop is not held at peak moisture.'
+    },
+    {
+      k: ['irrig', 'water', 'moisture'],
+      a: 'Irrigation: the best windows this week are Monday and Friday, 05:30–07:00, when evaporation and wind are lowest. That is an estimated 20–35% water saving over a blanket schedule. Skip Tuesday — peak wind 14 km/h.'
+    },
+    {
+      k: ['wind', 'storm', 'weather', 'rain'],
+      a: 'Forecast peak wind is 14 km/h this week, on Tuesday. Reinforce fencing, shade nets and drying covers before then. Rainfall probability stays low, so irrigation planning can continue as scheduled.'
+    },
+    {
+      k: ['trace', 'batch', 'receipt', 'payment', 'price paid'],
+      a: 'Traceability: batch #011 runs from delivery (receipt #1183, 240 kg, grade A-) through cooperative batching and washing to union intake. The sale and final payment step is still pending; the farmer-visible share is 38.4/kg and will be pushed to the farmer by SMS the moment it clears.'
+    }
+  ];
+  var FALLBACK = 'I can help with sowing dates, germination and reseeding, both fertilization rounds, pest and weed pressure, irrigation windows, and yield or price outlook. Ask about any of those, and confirm the recommendation with your extension agent before acting. (Demo response.)';
+
+  function answerFor(q) {
+    var s = q.toLowerCase();
+    for (var i = 0; i < ANSWERS.length; i++) {
+      for (var j = 0; j < ANSWERS[i].k.length; j++) {
+        if (s.indexOf(ANSWERS[i].k[j]) > -1) return ANSWERS[i].a;
+      }
+    }
+    return FALLBACK;
+  }
+
+  function pushMsg(text, who) {
+    var box = el('chatBox');
+    var d = document.createElement('div');
+    d.className = 'msg ' + who;
+    d.textContent = text;
+    box.appendChild(d);
+    box.scrollTop = box.scrollHeight;
+    return d;
+  }
+
+  function sendChat(preset) {
+    var inp = el('chatInput');
+    var q = (preset !== undefined ? preset : inp.value).trim();
+    if (!q) return;
+    pushMsg(q, 'user');
+    if (preset === undefined) inp.value = '';
+    var box = el('chatBox');
+    var typing = document.createElement('div');
+    typing.className = 'msg ai typing';
+    typing.innerHTML = '<i></i><i></i><i></i>';
+    box.appendChild(typing);
+    box.scrollTop = box.scrollHeight;
+    setTimeout(function () {
+      if (typing.parentNode) typing.parentNode.removeChild(typing);
+      pushMsg(answerFor(q), 'ai');
+    }, 520);
+  }
+  el('chatSend').addEventListener('click', function () { sendChat(); });
+  el('chatInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); sendChat(); }
+  });
+  el('chatSuggest').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-ask]');
+    if (b) sendChat(b.getAttribute('data-ask'));
+  });
+
+  var SEED_TX = [
+    { receipt: 1187, farmer: 'Terefe M.', point: 'Collection point A', qty: 185, grade: 'A', price: 38.5, status: 'Paid & confirmed' },
+    { receipt: 1186, farmer: 'Chaltu B.', point: 'Collection point A', qty: 210, grade: 'A-', price: 38.0, status: 'Paid & confirmed' },
+    { receipt: 1185, farmer: 'Abera K.', point: 'Collection point B', qty: 240, grade: 'A-', price: 38.4, status: 'Paid — awaiting confirm' },
+    { receipt: 1184, farmer: 'Hussen A.', point: 'Collection point B', qty: 160, grade: 'B', price: 36.9, status: 'Disputed — under review' },
+    { receipt: 1183, farmer: 'Abera K.', point: 'Collection point A', qty: 240, grade: 'A-', price: 38.4, status: 'Paid & confirmed' }
+  ];
+  var tx = LS.get('pilotDeliveries', SEED_TX.slice());
+
+  function statusTag(s) {
+    var cls = 'ok';
+    if (/await/i.test(s)) cls = 'warn';
+    else if (/disput/i.test(s)) cls = 'bad';
+    else if (/pending|recorded/i.test(s)) cls = 'warn';
+    var sp = document.createElement('span');
+    sp.className = 'tag ' + cls;
+    sp.textContent = s;
+    return sp;
+  }
+
+  function renderTx() {
+    var tbody = el('txRows');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    tx.forEach(function (r) {
+      var tr = document.createElement('tr');
+      [r.receipt, r.farmer, r.point, r.qty, r.grade, Number(r.price).toFixed(1)].forEach(function (v, i) {
+        var td = document.createElement('td');
+        if (i === 0) { var b = document.createElement('b'); b.textContent = v; td.appendChild(b); }
+        else td.textContent = v;
+        tr.appendChild(td);
+      });
+      var td = document.createElement('td');
+      td.appendChild(statusTag(r.status));
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+    });
+    var added = tx.reduce(function (s, r) { return s + Number(r.qty || 0); }, 0) - SEED_TX.reduce(function (s, r) { return s + Number(r.qty || 0); }, 0);
+    if (el('stDelivered')) el('stDelivered').textContent = fmt(3240 + Math.max(0, added)) + ' kg';
+    if (el('stBatches')) el('stBatches').textContent = 14 + Math.max(0, tx.length - SEED_TX.length);
+  }
+
+  el('addDeliveryBtn').addEventListener('click', function () {
+    var farmer = el('dFarmer').value.trim();
+    var qty = num(el('dQty').value, 0);
+    var price = num(el('dPrice').value, 0);
+    if (!farmer) { toast('Enter the farmer name before recording a delivery.', 'err'); el('dFarmer').focus(); return; }
+    if (!qty || qty <= 0) { toast('Enter a quantity in kilograms.', 'err'); el('dQty').focus(); return; }
+    var next = tx.reduce(function (m, r) { return Math.max(m, r.receipt); }, 1187) + 1;
+    tx.unshift({
+      receipt: next,
+      farmer: farmer,
+      point: el('dPoint').value,
+      qty: qty,
+      grade: el('dGrade').value,
+      price: price || 38,
+      status: 'Recorded — pending batch'
+    });
+    LS.set('pilotDeliveries', tx);
+    renderTx();
+    ['dFarmer', 'dQty', 'dPrice'].forEach(function (id) { el(id).value = ''; });
+    toast('Delivery recorded on the shared ledger — receipt #' + next + ' created.', 'ok');
+  });
+
+  el('issueReceiptBtn').addEventListener('click', function () {
+    var last = tx[0];
+    toast('Receipt #' + last.receipt + ' for ' + last.farmer + ' (' + last.qty + ' kg) queued for SMS/WhatsApp delivery.', 'ok');
+  });
+
+  var SEED_FARMERS = [
+    { id: 'FR-001', name: 'Mohamed A.', plot: 'Plot 1', lat: 9.4949, lng: 40.3133, crop: 'Tomato (irrigated)', consent: true },
+    { id: 'FR-002', name: 'Fatuma D.', plot: 'Plot 2', lat: 9.4961, lng: 40.3141, crop: 'Onion', consent: true },
+    { id: 'FR-003', name: 'Ahmed Y.', plot: 'Plot 1', lat: 9.4952, lng: 40.3128, crop: 'Pepper', consent: false },
+    { id: 'FR-004', name: 'Hawa M.', plot: 'Plot 2', lat: 9.4965, lng: 40.3148, crop: 'Tomato (irrigated)', consent: true },
+    { id: 'FR-005', name: 'Yusuf I.', plot: 'Plot 1', lat: 9.4947, lng: 40.3130, crop: 'Maize', consent: false }
+  ];
+  var farmers = LS.get('pilotFarmers', SEED_FARMERS.slice());
+
+  function renderFarmers() {
+    var tbody = el('farmerRows');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    farmers.forEach(function (f) {
+      var tr = document.createElement('tr');
+      var c1 = document.createElement('td'); c1.textContent = f.id; tr.appendChild(c1);
+      var c2 = document.createElement('td');
+      var b = document.createElement('b'); b.textContent = f.name; c2.appendChild(b); tr.appendChild(c2);
+      var c3 = document.createElement('td'); c3.textContent = f.plot || '—'; tr.appendChild(c3);
+      var c4 = document.createElement('td'); c4.textContent = f.lat + ', ' + f.lng; tr.appendChild(c4);
+      var c5 = document.createElement('td'); c5.textContent = f.crop || '—'; tr.appendChild(c5);
+      var c6 = document.createElement('td');
+      var tag = document.createElement('span');
+      tag.className = 'tag ' + (f.consent ? 'ok' : 'warn');
+      tag.textContent = f.consent ? 'Yes' : 'Pending';
+      c6.appendChild(tag); tr.appendChild(c6);
+      tbody.appendChild(tr);
+    });
+    if (el('stFarmers')) el('stFarmers').textContent = 86 + Math.max(0, farmers.length - SEED_FARMERS.length);
+  }
+
+  el('locateFarmerBtn').addEventListener('click', function () {
+    if (window._map) {
+      var c = window._map.getCenter();
+      el('fLat').value = c.lat.toFixed(5);
+      el('fLng').value = c.lng.toFixed(5);
+      toast('Coordinates filled from the current map centre.', 'info');
+    } else {
+      el('fLat').value = num(CFG.lat, DEFAULTS.lat).toFixed(5);
+      el('fLng').value = num(CFG.lng, DEFAULTS.lng).toFixed(5);
+      toast('Coordinates filled from the saved map defaults.', 'info');
+    }
+  });
+
+  el('addFarmerBtn').addEventListener('click', function () {
+    if (!el('fConsent').checked) {
+      toast('Informed consent is required before registration (data-governance rule).', 'err');
+      return;
+    }
+    var name = el('fName').value.trim();
+    if (!name) { toast('Enter the farmer’s name.', 'err'); el('fName').focus(); return; }
+    var maxId = farmers.reduce(function (m, f) { return Math.max(m, parseInt(String(f.id).replace(/\D/g, ''), 10) || 0); }, 0);
+    var n = maxId + 1;
+    var f = {
+      id: 'FR-' + String(n).padStart(3, '0'),
+      name: name,
+      plot: el('fPlot').value.trim() || '—',
+      lat: num(el('fLat').value, num(CFG.lat, DEFAULTS.lat)),
+      lng: num(el('fLng').value, num(CFG.lng, DEFAULTS.lng)),
+      crop: el('fCrop').value,
+      consent: true
+    };
+    farmers.push(f);
+    LS.set('pilotFarmers', farmers);
+    renderFarmers();
+    ['fName', 'fPlot', 'fLat', 'fLng'].forEach(function (id) { el(id).value = ''; });
+    el('fConsent').checked = false;
+    toast(f.name + ' registered as ' + f.id + ' with consent on file.', 'ok');
+  });
+
+  el('exportDataBtn').addEventListener('click', function () {
+    var payload = {
+      exportedAt: new Date().toISOString(),
+      config: CFG,
+      zones: zones,
+      deliveries: tx,
+      farmers: farmers
+    };
+    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'pilot-platform-data.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+    toast('All demo data exported as JSON.', 'ok');
+  });
+
+  el('resetDataBtn').addEventListener('click', function () {
+    if (!window.confirm('Reset all zones, deliveries and farmer profiles to the demo defaults?')) return;
+    LS.del('pilotZones'); LS.del('pilotDeliveries'); LS.del('pilotFarmers');
+    zones = [];
+    zoneSeq = 0;
+    if (drawnItems) drawnItems.clearLayers();
+    renderZones();
+    tx = SEED_TX.slice();
+    LS.set('pilotDeliveries', tx);
+    renderTx();
+    farmers = SEED_FARMERS.slice();
+    LS.set('pilotFarmers', farmers);
+    renderFarmers();
+    toast('Demo data reset to defaults.', 'info');
+  });
+
+  /* ============================================================
+     BOOT — map is lazy-inited when Agro Advisory page is shown
+     ============================================================ */
+  applyTheme();
+  applyConfig();
+  renderZones();
+  renderTx();
+  renderFarmers();
+
+  function bootCharts() { if (chartsBooted) return; initCharts(); restyleCharts(); }
+  if (document.readyState === 'complete') {
+    bootCharts();
+  } else {
+    window.addEventListener('load', bootCharts);
+  }
+  setTimeout(function () { if (!Object.keys(charts).length) bootCharts(); }, 1200);
+
+  if (location.hash) {
+    var id = location.hash.replace('#', '');
+    if (el('page-' + id)) showPage(id);
+  }
+  window.addEventListener('resize', function () {
+    if (window._map) window._map.invalidateSize();
+  });
 })();
 </script>
 </body>
